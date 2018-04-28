@@ -2,6 +2,7 @@ import React, { PureComponent, Fragment } from "react";
 import { ScrollSyncPane } from "react-scroll-sync";
 import styled from "styled-components";
 import Checkbox from "../../components/checkbox/checkbox";
+import ExpandCollapse from "../../components/expand_collapse/expand_collapse";
 
 import HeaderCell from "../header_cell/header_cell";
 
@@ -10,20 +11,22 @@ const Static = styled.div`
   position: relative;
   z-index: 2;
   background: white;
-  min-width: ${props => props.width + 40}px;
-  max-width: ${props => props.width + 40}px;
+  min-width: ${props => props.width + 80}px;
+  max-width: ${props => props.width + 80}px;
   display: flex;
   flex-direction: row;
   align-items: center;
 `;
-
 
 class StaticHeader extends PureComponent {
   render() {
     const { columns, width, commitResize } = this.props;
     return (
       <Static width={width}>
-        <Checkbox />
+        <div style={{ padding: "0 10px" }}>
+          <ExpandCollapse />
+          <Checkbox />
+        </div>
         {columns.map((col, index) => (
           <HeaderCell
             width={col.width}

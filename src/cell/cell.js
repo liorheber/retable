@@ -7,6 +7,7 @@ const RendererStyle = styled.div`
   padding: 0 14px;
   width: 100%;
   box-sizing: border-box;
+  align-items: center;
 `;
 
 const getRenderer = (type) => {
@@ -16,7 +17,7 @@ const getRenderer = (type) => {
     case "CHANNEL":
       return ({value}) => <RendererStyle title={value.tooltip}>{value.icon}</RendererStyle>;
     case "IMAGE":
-      return ({value}) => <RendererStyle style={{textAlign: "left"}}><img src={value} height={60}/></RendererStyle>;
+      return ({value}) => <RendererStyle style={{textAlign: "left"}}><img src={value} height={52}/></RendererStyle>;
     case "TEXT":
       return ({value}) => <RendererStyle>{value}</RendererStyle>;
     case "NUMBER":

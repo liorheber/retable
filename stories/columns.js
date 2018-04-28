@@ -3,7 +3,7 @@ const columns = [
     id: "S1",
     name: "Product",
     type: "IMAGE",
-    width: 100,
+    width: 180,
     editable: true,
     sortable: true,
     resizable: true,
@@ -26,7 +26,7 @@ const columns = [
     name: "channel",
     filename: "channel",
     type: "CHANNEL",
-    width: 150,
+    width: 190,
     enableQuickFilter: true,
     filterType: "MONETARY"
   },
@@ -34,7 +34,7 @@ const columns = [
     id: "S2",
     name: "Product title X",
     type: "TEXT",
-    width: 150,
+    width: 190,
     minWidth: 80,
     defaultInColumnSelection: false,
     sortable: true,
@@ -62,7 +62,7 @@ const columns = [
     name: "asin",
     filename: "asin",
     type: "TEXT",
-    width: 150,
+    width: 190,
     editType: "TEXT",
     editable: true,
     sortable: true,
@@ -76,7 +76,7 @@ const columns = [
     name: "parent_asin",
     filename: "parent_asin",
     type: "BOOLEAN",
-    width: 150,
+    width: 190,
     editType: "TEXT",
     editable: true,
     sortable: true,
@@ -91,7 +91,7 @@ const columns = [
     type: "CAMPAIGN_ACTIVITY_TYPE",
     sortable: true,
     resizable: true,
-    width: 150,
+    width: 190,
     enableQuickFilter: true,
     filterType: "PERCENTAGE"
   },
@@ -100,7 +100,7 @@ const columns = [
     name: "impressions",
     filename: "impressions",
     type: "NUMBER",
-    width: 150,
+    width: 190,
     sortable: true,
     resizable: true,
     filterType: "NUMERIC",
@@ -111,7 +111,7 @@ const columns = [
     name: "impre",
     filename: "impre",
     type: "NUMBER",
-    width: 150,
+    width: 190,
     comparisonParentId: "S22"
   },
   {
@@ -119,7 +119,7 @@ const columns = [
     name: "Previous",
     filename: "Previous",
     type: "NUMBER",
-    width: 150,
+    width: 190,
     comparisonParentId: "S22"
   },
   {
@@ -127,7 +127,7 @@ const columns = [
     name: "Delta",
     filename: "Delta",
     type: "NUMBER",
-    width: 150,
+    width: 190,
     comparisonParentId: "S22"
   },
   {
@@ -135,7 +135,7 @@ const columns = [
     name: "Delta %",
     filename: "Delta %",
     type: "NUMBER",
-    width: 150,
+    width: 190,
     comparisonParentId: "S22"
   },
   {
@@ -143,105 +143,105 @@ const columns = [
     name: "publisher",
     filename: "publisher",
     type: "TEXT",
-    width: 150
+    width: 190
   },
   {
     id: "S8",
     name: "upc",
     filename: "upc",
     type: "TEXT",
-    width: 150
+    width: 190
   },
   {
     id: "S9",
     name: "ean",
     filename: "ean",
     type: "TEXT",
-    width: 150
+    width: 190
   },
   {
     id: "S10",
     name: "brand",
     filename: "brand",
     type: "TEXT",
-    width: 150
+    width: 190
   },
   {
     id: "S11",
     name: "availability",
     filename: "availability",
     type: "TEXT",
-    width: 150
+    width: 190
   },
   {
     id: "S12",
     name: "price",
     filename: "price",
     type: "TEXT",
-    width: 150
+    width: 190
   },
   {
     id: "S13",
     name: "lowest_price",
     filename: "lowest_price",
     type: "TEXT",
-    width: 150
+    width: 190
   },
   {
     id: "S14",
     name: "customer_review",
     filename: "customer_review",
     type: "NUMBER",
-    width: 150
+    width: 190
   },
   {
     id: "S15",
     name: "department",
     filename: "department",
     type: "TEXT",
-    width: 150
+    width: 190
   },
   {
     id: "S16",
     name: "import_date",
     filename: "import_date",
     type: "DATE",
-    width: 150
+    width: 190
   },
   {
     id: "S17",
     name: "color",
     filename: "color",
     type: "TEXT",
-    width: 150
+    width: 190
   },
   {
     id: "S18",
     name: "manufacturer",
     filename: "manufacturer",
     type: "TEXT",
-    width: 150
+    width: 190
   },
   {
     id: "S19",
     name: "model",
     filename: "model",
     type: "TEXT",
-    width: 150
+    width: 190
   },
   {
     id: "S20",
     name: "mpn",
     filename: "mpn",
     type: "TEXT",
-    width: 150
+    width: 190
   },
   {
     id: "S21",
     name: "similiar_products",
     filename: "similiar_products",
     type: "TEXT",
-    width: 150
+    width: 190
   }
 ];
 

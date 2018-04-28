@@ -9,8 +9,8 @@ const Static = styled.div`
   position: relative;
   z-index: 2;
   background: white;
-  min-width: ${props => props.width}px;
-  max-width: ${props => props.width}px;
+  min-width: ${props => props.width + 80}px;
+  max-width: ${props => props.width + 80}px;
   display: flex;
   flex-direction: row;
 `;
@@ -23,9 +23,9 @@ class StaticFooter extends PureComponent {
   render() {
     const { columns, width } = this.props;
     return (
-      <Static width={width + 40}>
+      <Static width={width}>
         {columns.map((col, index) => (
-          <Cell width={col.width + 40} className={`col-${col.id}`} key={index}>
+          <Cell width={col.width + 80} className={`col-${col.id}`} key={index}>
             {col.name}
           </Cell>
         ))}

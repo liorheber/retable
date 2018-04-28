@@ -73,7 +73,7 @@ class ReTable extends PureComponent {
   render() {
     const { rows } = this.props;
     const { staticColumns, dynamicColumns } = this.state;
-    const rowHeight = 72;
+    const rowHeight = 60;
 
     const dynamicWidth = dynamicColumns.reduce(
       (width, col) => width + col.width + 1,

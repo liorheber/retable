@@ -6,8 +6,8 @@ import CheckBoxIcon from "@material-ui/icons/CheckBox";
 
 const styles = theme => ({
   size: {
-    width: 40,
-    height: 40
+    width: 30,
+    height: 30
   },
   sizeIcon: {
     fontSize: 20,
