@@ -22,7 +22,8 @@ class ExpandCollapse extends PureComponent {
     this.state = { expanded: false };
   }
 
-  onClick() {
+  onClick(event) {
+    event.stopPropagation();
     const { expanded } = this.state;
     this.setState({ expanded: !expanded });
   }
