@@ -40,7 +40,7 @@ class Row extends PureComponent {
   }
 
   render() {
-    const { children, index, rowHeight, width } = this.props;
+    const { children, index, rowHeight, width, onSelectRow } = this.props;
     return (
       <RowStyle
         rowHeight={rowHeight}
@@ -49,6 +49,7 @@ class Row extends PureComponent {
         className={`row-${index}`}
         onMouseEnter={this.onMouseEnter}
         onMouseLeave={this.onMouseLeave}
+        onClick={() => onSelectRow(index)}
       >
         {children}
       </RowStyle>

@@ -15,9 +15,10 @@ const styles = theme => ({
   }
 });
 
-const CustomCheckbox = ({ classes, onChange }) => (
+const CustomCheckbox = ({ classes, onClick, checked }) => (
   <Checkbox
-    onChange={onChange}
+    checked={checked}
+    onClick={onClick}
     className={classes.size}
     icon={<CheckBoxOutlineBlankIcon className={classes.sizeIcon} />}
     checkedIcon={<CheckBoxIcon className={classes.sizeIcon} />}

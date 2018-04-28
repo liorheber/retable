@@ -20,19 +20,9 @@ const Static = styled.div`
 `;
 
 class StaticArea extends PureComponent {
-  selectRow(index, event) {
-    const rows = document.getElementsByClassName(`row-${index}`);
-    if (event.target.checked) {
-      rows[0].classList.add("row-selected");
-      rows[1].classList.add("row-selected");
-    } else {
-      rows[0].classList.remove("row-selected");
-      rows[1].classList.remove("row-selected");
-    }
-  }
 
   render() {
-    const { rows, columns, width, rowHeight } = this.props;
+    const { rows, columns, width, rowHeight, onSelectRow, selection, onCheckboxSelection } = this.props;
     return (
       <Static width={width}>
         {rows.map((row, index) => (
@@ -41,10 +31,11 @@ class StaticArea extends PureComponent {
             key={index}
             index={index}
             width={width + 80}
+            onSelectRow={onSelectRow}
           >
             <div style={{ padding: "0 10px" }}>
               <ExpandCollapse />
-              <Checkbox onChange={event => this.selectRow(index, event)} />
+              <Checkbox onClick={event => onCheckboxSelection(index, selection.includes(index), event)} index={index} selection={selection} checked={selection.includes(index)}/>
             </div>
             {columns.map((col, index) => (
               <Cell

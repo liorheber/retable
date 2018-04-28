@@ -41,6 +41,9 @@ class ReTable extends PureComponent {
   constructor(props) {
     super(props);
     this.commitResize = this.commitResize.bind(this);
+    this.onSelectRow = this.onSelectRow.bind(this);
+    this.handleSelection = this.handleSelection.bind(this);
+    this.removeSelections = this.removeSelections.bind(this);
 
     const staticColumns = props.columns.filter(
       col => col.defaultInColumnSelection
@@ -53,6 +56,7 @@ class ReTable extends PureComponent {
       columns: props.columns,
       staticColumns,
       dynamicColumns,
+      selection: []
     };
   }
 
@@ -70,9 +74,41 @@ class ReTable extends PureComponent {
     });
   }
 
+  removeSelections(index, isSelected){
+    const rows = document.getElementsByClassName(`row-selected`);
+    while (rows.length) {
+        rows[0].classList.remove("row-selected");
+    }
+    this.setState({selection: []}, () => this.handleSelection(index, isSelected));
+  }
+
+  handleSelection(index, isSelected, event) {
+    event && event.stopPropagation();
+    const { selection } = this.state;
+    const rows = document.getElementsByClassName(`row-${index}`);
+    if (isSelected) {
+      rows[0].classList.remove("row-selected");
+      rows[1].classList.remove("row-selected");
+      this.setState({selection: selection.filter(id => id !== index)});
+    } else {
+      rows[0].classList.add("row-selected");
+      rows[1].classList.add("row-selected");
+      const newSelection = selection.slice();
+      newSelection.push(index);
+      this.setState({selection: newSelection});
+    }
+  }
+
+  onSelectRow(index) {
+    const { selection } = this.state;
+    const isSelected = selection.includes(index);
+    this.removeSelections(index, isSelected);
+
+  }
+
   render() {
     const { rows } = this.props;
-    const { staticColumns, dynamicColumns } = this.state;
+    const { staticColumns, dynamicColumns, selection } = this.state;
     const rowHeight = 60;
 
     const dynamicWidth = dynamicColumns.reduce(
@@ -98,12 +134,16 @@ class ReTable extends PureComponent {
               columns={staticColumns}
               rowHeight={rowHeight}
               width={staticWidth}
+              onSelectRow={this.onSelectRow}
+              selection={selection}
+              onCheckboxSelection={this.handleSelection}
             />
             <DynamicArea
               rows={rows}
               columns={dynamicColumns}
               rowHeight={rowHeight}
               width={dynamicWidth}
+              onSelectRow={this.onSelectRow}
             />
           </div>
           <Footer

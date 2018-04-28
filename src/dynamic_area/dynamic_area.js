@@ -16,12 +16,12 @@ const Dynamic = styled.div`
 
 class DynamicArea extends PureComponent {
   render() {
-    const { rows, columns, rowHeight, width } = this.props;
+    const { rows, columns, rowHeight, width, onSelectRow } = this.props;
     return (
       <ScrollSyncPane>
         <Dynamic>
           {rows.map((row, index) => (
-            <Row rowHeight={rowHeight} key={index} index={index}  width={width}>
+            <Row rowHeight={rowHeight} key={index} index={index}  width={width} onSelectRow={onSelectRow}>
               {columns.map((col, index) => (
                 <Cell width={col.width} key={index} className={`col-${col.id}`} type={col.type} value={row[col.id]}/>
               ))}
