@@ -23,9 +23,9 @@ class StaticFooter extends PureComponent {
   render() {
     const { columns, width } = this.props;
     return (
-      <Static width={width}>
+      <Static width={width + 40}>
         {columns.map((col, index) => (
-          <Cell width={col.width} className={`col-${col.id}`} key={index}>
+          <Cell width={col.width + 40} className={`col-${col.id}`} key={index}>
             {col.name}
           </Cell>
         ))}

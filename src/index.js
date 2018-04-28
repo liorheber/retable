@@ -17,9 +17,14 @@ const Grid = styled.div`
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: auto;
+  border: 1px solid #e9ebf0;
 
   .row-hover {
     background-color: #f9f8fe;
+  }
+  
+  .row-selected {
+    background-color: #f4f1fd;
   }
 `;
 

@@ -8,7 +8,7 @@ class HeaderCell extends PureComponent {
   render() {
     const { width, id, children, commitResize, value } = this.props;
     return (
-      <div style={{position: "relative", display: "flex"}}>
+      <div style={{position: "relative", display: "flex", height: "100%"}}>
         <Cell width={width} className={`col-${id}`} type="HEADER" value={value} />
         <Resize id={id} width={width} draggable={true} commitResize={commitResize}/>
       </div>
