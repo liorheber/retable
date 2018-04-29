@@ -20,7 +20,7 @@ const Static = styled.div`
 
 class StaticHeader extends PureComponent {
   render() {
-    const { columns, width, commitResize, selection, isAllSelected, onSelectAll } = this.props;
+    const { columns, width, commitResize, selection, isAllSelected, onSelectAll, marker, draggingStart, draggingEnd } = this.props;
     return (
       <Static width={width}>
         <div style={{ padding: "0 10px" }}>
@@ -34,6 +34,9 @@ class StaticHeader extends PureComponent {
             key={index}
             commitResize={commitResize}
             value={col.name}
+            marker={marker}
+            draggingStart={draggingStart}
+            draggingEnd={draggingEnd}
           />
         ))}
       </Static>

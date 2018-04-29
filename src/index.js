@@ -5,6 +5,7 @@ import StaticArea from "./static_area/static_area";
 import DynamicArea from "./dynamic_area/dynamic_area";
 import Header from "./header/header";
 import Footer from "./footer/footer";
+import Marker from "./header/draggable/draggable_marker";
 
 const Grid = styled.div`
   display: flex;
@@ -22,7 +23,7 @@ const Grid = styled.div`
   .row-hover {
     background-color: #f9f8fe;
   }
-  
+
   .row-selected {
     background-color: #f4f1fd;
   }
@@ -40,11 +41,14 @@ injectGlobal`
 class ReTable extends PureComponent {
   constructor(props) {
     super(props);
+    this.marker = React.createRef();
     this.commitResize = this.commitResize.bind(this);
     this.onSelectRow = this.onSelectRow.bind(this);
     this.handleSelection = this.handleSelection.bind(this);
     this.removeSelections = this.removeSelections.bind(this);
     this.onSelectAll = this.onSelectAll.bind(this);
+    this.draggingStart = this.draggingStart.bind(this);
+    this.draggingEnd = this.draggingEnd.bind(this);
 
     const staticColumns = props.columns.filter(
       col => col.defaultInColumnSelection
@@ -75,12 +79,14 @@ class ReTable extends PureComponent {
     });
   }
 
-  removeSelections(index, isSelected){
+  removeSelections(index, isSelected) {
     const rows = document.getElementsByClassName(`row-selected`);
     while (rows.length) {
-        rows[0].classList.remove("row-selected");
+      rows[0].classList.remove("row-selected");
     }
-    this.setState({selection: []}, () => this.handleSelection(index, isSelected));
+    this.setState({ selection: [] }, () =>
+      this.handleSelection(index, isSelected)
+    );
   }
 
   handleSelection(index, isSelected, event) {
@@ -90,13 +96,13 @@ class ReTable extends PureComponent {
     if (isSelected) {
       rows[0].classList.remove("row-selected");
       rows[1].classList.remove("row-selected");
-      this.setState({selection: selection.filter(id => id !== index)});
+      this.setState({ selection: selection.filter(id => id !== index) });
     } else {
       rows[0].classList.add("row-selected");
       rows[1].classList.add("row-selected");
       const newSelection = selection.slice();
       newSelection.push(index);
-      this.setState({selection: newSelection});
+      this.setState({ selection: newSelection });
     }
   }
 
@@ -104,7 +110,6 @@ class ReTable extends PureComponent {
     const { selection } = this.state;
     const isSelected = selection.includes(index);
     this.removeSelections(index, isSelected);
-
   }
 
   onSelectAll() {
@@ -114,7 +119,7 @@ class ReTable extends PureComponent {
     const newSelection = [];
     rows.forEach((row, index) => {
       const rowToSelect = document.getElementsByClassName(`row-${index}`);
-      if(isAllSelected){
+      if (isAllSelected) {
         rowToSelect[0].classList.remove("row-selected");
         rowToSelect[1].classList.remove("row-selected");
       } else {
@@ -123,12 +128,19 @@ class ReTable extends PureComponent {
         newSelection.push(index);
       }
     });
-    this.setState({selection: newSelection})
+    this.setState({ selection: newSelection });
+  }
+
+  draggingStart() {
+    this.setState({dragging: true});
+  }
+  draggingEnd() {
+    this.setState({dragging: false});
   }
 
   render() {
     const { rows } = this.props;
-    const { staticColumns, dynamicColumns, selection } = this.state;
+    const { staticColumns, dynamicColumns, selection, dragging } = this.state;
     const rowHeight = 60;
     const isAllSelected = selection.length === rows.length;
 
@@ -151,6 +163,9 @@ class ReTable extends PureComponent {
             isAllSelected={isAllSelected}
             selection={selection}
             onSelectAll={this.onSelectAll}
+            marker={this.marker}
+            draggingStart={this.draggingStart}
+            draggingEnd={this.draggingEnd}
           />
           <div style={{ display: "flex" }}>
             <StaticArea
@@ -176,6 +191,7 @@ class ReTable extends PureComponent {
             width={staticWidth}
             rowHeight={rowHeight}
           />
+          <Marker ref={this.marker} dragging={dragging}/>
         </Grid>
       </ScrollSync>
     );

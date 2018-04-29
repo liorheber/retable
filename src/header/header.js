@@ -26,7 +26,10 @@ class Header extends PureComponent {
       commitResize,
       isAllSelected,
       selection,
-      onSelectAll
+      onSelectAll,
+      marker,
+      draggingStart,
+      draggingEnd
     } = this.props;
     return (
       <HeaderStyle>
@@ -37,8 +40,17 @@ class Header extends PureComponent {
           isAllSelected={isAllSelected}
           selection={selection}
           onSelectAll={onSelectAll}
+          marker={marker}
+          draggingStart={draggingStart}
+          draggingEnd={draggingEnd}
         />
-        <DynamicHeader columns={dynamicColumns} commitResize={commitResize} />
+        <DynamicHeader
+          columns={dynamicColumns}
+          commitResize={commitResize}
+          marker={marker}
+          draggingStart={draggingStart}
+          draggingEnd={draggingEnd}
+        />
       </HeaderStyle>
     );
   }
