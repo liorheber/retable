@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const Marker = styled.div`
   display: ${props => (props.resizing ? "block" : "none")};
-  background: #5699c3;
-  width: 3px;
+  background: #5699c380;
+  width: 4px;
   height: 100%;
   position: fixed;
   z-index: 1000;
