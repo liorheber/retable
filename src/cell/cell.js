@@ -8,6 +8,7 @@ const RendererStyle = styled.div`
   width: 100%;
   box-sizing: border-box;
   align-items: center;
+  display: flex;
 `;
 
 const getRenderer = (type) => {
@@ -33,7 +34,7 @@ const CellStyle = styled.div`
   flex-direction: row;
   white-space: nowrap;
   border-right: 1px solid #e9ebf0;
-  align-items: center;
+  align-items: stretch;
   height: 100%;
   justify-content: space-between;
   min-width: ${props => props.width}px;
