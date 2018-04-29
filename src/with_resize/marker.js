@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment } from "react";
 import styled from "styled-components";
 
 const Marker = styled.div`
-  display: ${props => (props.dragging ? "block" : "none")};
+  display: ${props => (props.resizing ? "block" : "none")};
   background: #5699c3;
   width: 3px;
   height: 100%;

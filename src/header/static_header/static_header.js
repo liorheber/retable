@@ -20,12 +20,23 @@ const Static = styled.div`
 
 class StaticHeader extends PureComponent {
   render() {
-    const { columns, width, commitResize, selection, isAllSelected, onSelectAll, marker, draggingStart, draggingEnd } = this.props;
+    const {
+      columns,
+      width,
+      commitResize,
+      selection,
+      isAllSelected,
+      onSelectAll
+    } = this.props;
     return (
       <Static width={width}>
         <div style={{ padding: "0 10px" }}>
           <ExpandCollapse />
-          <Checkbox checked={isAllSelected} indeterminate={!isAllSelected && selection.length > 0} onClick={onSelectAll}/>
+          <Checkbox
+            checked={isAllSelected}
+            indeterminate={!isAllSelected && selection.length > 0}
+            onClick={onSelectAll}
+          />
         </div>
         {columns.map((col, index) => (
           <HeaderCell
@@ -34,9 +45,6 @@ class StaticHeader extends PureComponent {
             key={index}
             commitResize={commitResize}
             value={col.name}
-            marker={marker}
-            draggingStart={draggingStart}
-            draggingEnd={draggingEnd}
           />
         ))}
       </Static>

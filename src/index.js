@@ -5,29 +5,8 @@ import StaticArea from "./static_area/static_area";
 import DynamicArea from "./dynamic_area/dynamic_area";
 import Header from "./header/header";
 import Footer from "./footer/footer";
-import Marker from "./header/draggable/draggable_marker";
-
-const Grid = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 100%;
-  font-size: 14px;
-  font-family: RobotoRg, "Helvetica Neue", sans-serif;
-  color: #6e6e6e;
-  font-smooth: always;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: auto;
-  border: 1px solid #e9ebf0;
-
-  .row-hover {
-    background-color: #f9f8fe;
-  }
-
-  .row-selected {
-    background-color: #f4f1fd;
-  }
-`;
+import Grid from "./grid/grid";
+import withResize from "./with_resize/with_resize";
 
 injectGlobal`
   @font-face {
@@ -41,14 +20,11 @@ injectGlobal`
 class ReTable extends PureComponent {
   constructor(props) {
     super(props);
-    this.marker = React.createRef();
     this.commitResize = this.commitResize.bind(this);
     this.onSelectRow = this.onSelectRow.bind(this);
     this.handleSelection = this.handleSelection.bind(this);
     this.removeSelections = this.removeSelections.bind(this);
     this.onSelectAll = this.onSelectAll.bind(this);
-    this.draggingStart = this.draggingStart.bind(this);
-    this.draggingEnd = this.draggingEnd.bind(this);
 
     const staticColumns = props.columns.filter(
       col => col.defaultInColumnSelection
@@ -131,13 +107,6 @@ class ReTable extends PureComponent {
     this.setState({ selection: newSelection });
   }
 
-  draggingStart() {
-    this.setState({dragging: true});
-  }
-  draggingEnd() {
-    this.setState({dragging: false});
-  }
-
   render() {
     const { rows } = this.props;
     const { staticColumns, dynamicColumns, selection, dragging } = this.state;
@@ -163,9 +132,6 @@ class ReTable extends PureComponent {
             isAllSelected={isAllSelected}
             selection={selection}
             onSelectAll={this.onSelectAll}
-            marker={this.marker}
-            draggingStart={this.draggingStart}
-            draggingEnd={this.draggingEnd}
           />
           <div style={{ display: "flex" }}>
             <StaticArea
@@ -191,11 +157,10 @@ class ReTable extends PureComponent {
             width={staticWidth}
             rowHeight={rowHeight}
           />
-          <Marker ref={this.marker} dragging={dragging}/>
         </Grid>
       </ScrollSync>
     );
   }
 }
 
-export default ReTable;
+export default withResize(ReTable);

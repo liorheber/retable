@@ -20,7 +20,7 @@ const Row = styled.div`
 
 class DynamicHeader extends PureComponent {
   render() {
-    const { columns, commitResize, marker, draggingStart, draggingEnd } = this.props;
+    const { columns, commitResize } = this.props;
     return (
       <ScrollSyncPane>
         <Dynamic>
@@ -31,9 +31,6 @@ class DynamicHeader extends PureComponent {
               key={index}
               commitResize={commitResize}
               value={col.name}
-              marker={marker}
-              draggingStart={draggingStart}
-              draggingEnd={draggingEnd}
             />
           ))}
         </Dynamic>

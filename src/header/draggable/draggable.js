@@ -26,20 +26,20 @@ class Resize extends PureComponent {
   }
 
   handleStart(event, draggableData) {
-    const {marker, draggingStart} = this.props;
+    const { marker, resizeStart } = this.props;
     const markerLine = ReactDOM.findDOMNode(marker.current);
     const draggableLine = ReactDOM.findDOMNode(this.draggable.current);
     markerLine.style.left = event.screenX - 12 + "px";
     markerLine.style.top = draggableLine.getBoundingClientRect().top + "px";
     this.setState({ lastX: draggableData.lastX });
-    draggingStart();
+    resizeStart();
     window.addEventListener("mousemove", this.moveLine, true);
   }
 
   handleStop(event, draggableData) {
     const { lastX } = this.state;
-    const { draggingEnd } = this.props;
-    draggingEnd();
+    const { resizeEnd } = this.props;
+    resizeEnd();
     window.removeEventListener("mousemove", this.moveLine, true);
     const { id, commitResize, width } = this.props;
     const delta = draggableData.lastX - lastX;
@@ -47,7 +47,7 @@ class Resize extends PureComponent {
   }
 
   moveLine(event) {
-    const {marker} = this.props;
+    const { marker } = this.props;
     const markerLine = ReactDOM.findDOMNode(marker.current);
     markerLine.style.left = event.screenX - 12 + "px";
   }
@@ -61,7 +61,7 @@ class Resize extends PureComponent {
           axis="x"
           draggable
         >
-          <DraggableStyle ref={this.draggable}/>
+          <DraggableStyle ref={this.draggable} />
         </DraggableCore>
       </Fragment>
     );
