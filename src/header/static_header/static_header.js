@@ -33,7 +33,7 @@ class StaticHeader extends PureComponent {
         <div style={{ padding: "0 10px" }}>
           <ExpandCollapse />
           <SelectionConsumer>
-            {({ onSelectAll, selection }) => (
+            {({ onSelectAll, selection, isAllSelected }) => (
               <Checkbox
                 checked={isAllSelected}
                 indeterminate={!isAllSelected && selection.length > 0}

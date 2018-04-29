@@ -69,9 +69,11 @@ const withSelection = WrappedComponent =>
     }
 
     render() {
+      const { rows } = this.props;
       const { selection } = this.state;
+      const isAllSelected = selection.length === rows.length;
       return (
-        <Context.Provider value={this.state}>
+        <Context.Provider value={{...this.state, isAllSelected}}>
           <WrappedComponent {...this.props} selection={selection} />
         </Context.Provider>
       );
