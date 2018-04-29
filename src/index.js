@@ -18,6 +18,11 @@ injectGlobal`
 `;
 
 class ReTable extends PureComponent {
+
+  static defaultProps = {
+    rowHeight: 60
+  };
+
   constructor(props) {
     super(props);
     this.commitResize = this.commitResize.bind(this);
@@ -108,9 +113,8 @@ class ReTable extends PureComponent {
   }
 
   render() {
-    const { rows } = this.props;
-    const { staticColumns, dynamicColumns, selection, dragging } = this.state;
-    const rowHeight = 60;
+    const { rows, rowHeight } = this.props;
+    const { staticColumns, dynamicColumns, selection } = this.state;
     const isAllSelected = selection.length === rows.length;
 
     const dynamicWidth = dynamicColumns.reduce(
