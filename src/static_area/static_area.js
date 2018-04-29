@@ -7,6 +7,8 @@ import Cell from "../cell/cell";
 import Checkbox from "../components/checkbox/checkbox";
 import ExpandCollapse from "../components/expand_collapse/expand_collapse";
 
+import { SelectionConsumer } from "../with_selection/with_selection";
+
 const Static = styled.div`
   overflow-y: auto;
   overflow-x: hidden;
@@ -20,9 +22,13 @@ const Static = styled.div`
 `;
 
 class StaticArea extends PureComponent {
-
   render() {
-    const { rows, columns, width, rowHeight, onSelectRow, selection, onCheckboxSelection } = this.props;
+    const {
+      rows,
+      columns,
+      width,
+      rowHeight
+    } = this.props;
     return (
       <Static width={width}>
         {rows.map((row, index) => (
@@ -31,11 +37,21 @@ class StaticArea extends PureComponent {
             key={index}
             index={index}
             width={width + 80}
-            onSelectRow={onSelectRow}
           >
             <div style={{ padding: "0 10px" }}>
               <ExpandCollapse />
-              <Checkbox onClick={event => onCheckboxSelection(index, selection.includes(index), event)} index={index} selection={selection} checked={selection.includes(index)}/>
+              <SelectionConsumer>
+                {({ handleSelection, selection }) => (
+                  <Checkbox
+                    onClick={event =>
+                      handleSelection(index, selection.includes(index), event)
+                    }
+                    index={index}
+                    selection={selection}
+                    checked={selection.includes(index)}
+                  />
+                )}
+              </SelectionConsumer>
             </div>
             {columns.map((col, index) => (
               <Cell

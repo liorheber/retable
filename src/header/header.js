@@ -25,8 +25,6 @@ class Header extends PureComponent {
       width,
       commitResize,
       isAllSelected,
-      selection,
-      onSelectAll
     } = this.props;
     return (
       <HeaderStyle>
@@ -35,8 +33,6 @@ class Header extends PureComponent {
           width={width}
           commitResize={commitResize}
           isAllSelected={isAllSelected}
-          selection={selection}
-          onSelectAll={onSelectAll}
         />
         <DynamicHeader
           columns={dynamicColumns}

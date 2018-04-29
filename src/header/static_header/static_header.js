@@ -6,6 +6,8 @@ import ExpandCollapse from "../../components/expand_collapse/expand_collapse";
 
 import HeaderCell from "../header_cell/header_cell";
 
+import { SelectionConsumer } from "../../with_selection/with_selection";
+
 const Static = styled.div`
   overflow: hidden;
   position: relative;
@@ -24,19 +26,21 @@ class StaticHeader extends PureComponent {
       columns,
       width,
       commitResize,
-      selection,
-      isAllSelected,
-      onSelectAll
+      isAllSelected
     } = this.props;
     return (
       <Static width={width}>
         <div style={{ padding: "0 10px" }}>
           <ExpandCollapse />
-          <Checkbox
-            checked={isAllSelected}
-            indeterminate={!isAllSelected && selection.length > 0}
-            onClick={onSelectAll}
-          />
+          <SelectionConsumer>
+            {({ onSelectAll, selection }) => (
+              <Checkbox
+                checked={isAllSelected}
+                indeterminate={!isAllSelected && selection.length > 0}
+                onClick={onSelectAll}
+              />
+            )}
+          </SelectionConsumer>
         </div>
         {columns.map((col, index) => (
           <HeaderCell

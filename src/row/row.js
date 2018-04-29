@@ -2,6 +2,8 @@ import React, { PureComponent, Fragment } from "react";
 import { ScrollSyncPane } from "react-scroll-sync";
 import styled from "styled-components";
 
+import { SelectionConsumer } from "../with_selection/with_selection";
+
 const RowStyle = styled.div`
   display: flex;
   position: relative;
@@ -40,19 +42,23 @@ class Row extends PureComponent {
   }
 
   render() {
-    const { children, index, rowHeight, width, onSelectRow } = this.props;
+    const { children, index, rowHeight, width } = this.props;
     return (
-      <RowStyle
-        rowHeight={rowHeight}
-        key={index}
-        width={width}
-        className={`row-${index}`}
-        onMouseEnter={this.onMouseEnter}
-        onMouseLeave={this.onMouseLeave}
-        onClick={() => onSelectRow(index)}
-      >
-        {children}
-      </RowStyle>
+      <SelectionConsumer>
+        {({onSelectRow}) => (
+          <RowStyle
+            rowHeight={rowHeight}
+            key={index}
+            width={width}
+            className={`row-${index}`}
+            onMouseEnter={this.onMouseEnter}
+            onMouseLeave={this.onMouseLeave}
+            onClick={() => onSelectRow(index)}
+          >
+            {children}
+          </RowStyle>
+        )}
+      </SelectionConsumer>
     );
   }
 }
