@@ -44,6 +44,7 @@ class ReTable extends PureComponent {
     this.onSelectRow = this.onSelectRow.bind(this);
     this.handleSelection = this.handleSelection.bind(this);
     this.removeSelections = this.removeSelections.bind(this);
+    this.onSelectAll = this.onSelectAll.bind(this);
 
     const staticColumns = props.columns.filter(
       col => col.defaultInColumnSelection
@@ -106,10 +107,30 @@ class ReTable extends PureComponent {
 
   }
 
+  onSelectAll() {
+    const { rows } = this.props;
+    const { selection } = this.state;
+    const isAllSelected = selection.length === rows.length;
+    const newSelection = [];
+    rows.forEach((row, index) => {
+      const rowToSelect = document.getElementsByClassName(`row-${index}`);
+      if(isAllSelected){
+        rowToSelect[0].classList.remove("row-selected");
+        rowToSelect[1].classList.remove("row-selected");
+      } else {
+        rowToSelect[0].classList.add("row-selected");
+        rowToSelect[1].classList.add("row-selected");
+        newSelection.push(index);
+      }
+    });
+    this.setState({selection: newSelection})
+  }
+
   render() {
     const { rows } = this.props;
     const { staticColumns, dynamicColumns, selection } = this.state;
     const rowHeight = 60;
+    const isAllSelected = selection.length === rows.length;
 
     const dynamicWidth = dynamicColumns.reduce(
       (width, col) => width + col.width + 1,
@@ -127,6 +148,9 @@ class ReTable extends PureComponent {
             dynamicColumns={dynamicColumns}
             width={staticWidth}
             commitResize={this.commitResize}
+            isAllSelected={isAllSelected}
+            selection={selection}
+            onSelectAll={this.onSelectAll}
           />
           <div style={{ display: "flex" }}>
             <StaticArea
