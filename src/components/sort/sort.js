@@ -12,7 +12,10 @@ const styles = theme => ({
   sizeIcon: {
     fontSize: 20,
     color: "#ced3df",
-    transition: "color 0.3s ease"
+    transition: "color 0.3s ease",
+    "&:hover": {
+      color: "#939cac"
+    }
   },
   hiddenIcon: {
     fontSize: 20,

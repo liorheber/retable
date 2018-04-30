@@ -11,7 +11,10 @@ const styles = theme => ({
   },
   sizeIcon: {
     fontSize: 24,
-    color: "#ced3df"
+    color: "#ced3df",
+    "&:hover": {
+      color: "#939cac"
+    }
   }
 });
 
