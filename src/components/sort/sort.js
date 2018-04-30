@@ -30,16 +30,16 @@ class Sort extends PureComponent {
   }
 
   render() {
-    const { classes, hover, direction } = this.props;
+    const { classes, hover, direction, onClick, isActive } = this.props;
     return (
-      <IconButton className={classes.size}>
+      <IconButton onClick={onClick} className={classes.size}>
         {direction === "asc" ? (
           <ArrowUpward
-            className={hover ? classes.sizeIcon : classes.hiddenIcon}
+            className={hover || isActive ? classes.sizeIcon : classes.hiddenIcon}
           />
         ) : (
           <ArrowDownward
-            className={hover ? classes.sizeIcon : classes.hiddenIcon}
+            className={hover || isActive ? classes.sizeIcon : classes.hiddenIcon}
           />
         )}
       </IconButton>

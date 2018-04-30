@@ -9,6 +9,7 @@ import Grid from "./grid/grid";
 import withResize from "./with_resize/with_resize";
 import withSelection from "./with_selection/with_selection";
 import Body from "./body/body";
+import withSort from "./with_sort/with_sort";
 
 injectGlobal`
   @font-face {
@@ -99,4 +100,4 @@ class ReTable extends PureComponent {
   }
 }
 
-export default withSelection(withResize(ReTable));
+export default withSort(withSelection(withResize(ReTable)));

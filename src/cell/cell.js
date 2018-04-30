@@ -13,7 +13,7 @@ const RendererStyle = styled.div`
 const getRenderer = type => {
   switch (type) {
     case "HEADER":
-      return ({ value }) => <Header value={value} />;
+      return ({ value, id, col }) => <Header value={value} id={id} direction={col.sort}/>;
     case "CHANNEL":
       return ({ value = {} }) => (
         <RendererStyle title={value.tooltip}>{value.icon}</RendererStyle>
@@ -67,11 +67,11 @@ const CellStyle = styled.div`
 
 class Cell extends PureComponent {
   render() {
-    const { width, type, value } = this.props;
+    const { width, type, value, id, col } = this.props;
     const Renderer = getRenderer(type);
     return (
       <CellStyle width={width}>
-        <Renderer value={value} />
+        <Renderer value={value} id={id} col={col}/>
       </CellStyle>
     );
   }

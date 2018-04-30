@@ -44,11 +44,10 @@ class StaticHeader extends PureComponent {
         </div>
         {columns.map((col, index) => (
           <HeaderCell
-            width={col.width}
-            id={col.id}
             key={index}
             commitResize={commitResize}
             value={col.name}
+            {...col}
           />
         ))}
       </Static>

@@ -1,6 +1,8 @@
 import React, { PureComponent, Fragment } from "react";
 import styled from "styled-components";
 
+import { SortConsumer } from "../../with_sort/with_sort";
+
 import Renderer from "../renderer";
 import Filter from "../../components/filter/filter";
 import Sort from "../../components/sort/sort";
@@ -28,7 +30,7 @@ class Header extends PureComponent {
   }
 
   render() {
-    const { value } = this.props;
+    const { value, id, direction } = this.props;
     const { hover } = this.state;
     return (
       <Renderer
@@ -37,7 +39,20 @@ class Header extends PureComponent {
       >
         <HeaderStyle>{value}</HeaderStyle>
         <div>
-          <Sort hover={hover} />
+          <SortConsumer>
+            {({ setSort, sort }) => {
+              const isActive = sort[0].id === id;
+              const direction = isActive ? sort[0].direction : undefined;
+              return (
+                <Sort
+                  hover={hover}
+                  onClick={() => setSort({ id, direction })}
+                  isActive={isActive}
+                  direction={direction}
+                />
+              );
+            }}
+          </SortConsumer>
           <Filter hover={hover} />
         </div>
       </Renderer>
