@@ -10,7 +10,7 @@ const styles = theme => ({
   },
   sizeIcon: {
     fontSize: 20,
-    color: "#939cac",
+    color: "#ced3df",
     transition: "color 0.3s ease"
   },
   hiddenIcon: {

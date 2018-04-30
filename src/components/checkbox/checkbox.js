@@ -12,6 +12,10 @@ const styles = theme => ({
   },
   sizeIcon: {
     fontSize: 20,
+    color: "#ced3df"
+  },
+  selectedIcon: {
+    fontSize: 20,
     color: "#939cac"
   }
 });
@@ -23,8 +27,8 @@ const CustomCheckbox = ({ classes, onClick, checked, indeterminate }) => (
     indeterminate={indeterminate}
     className={classes.size}
     icon={<CheckBoxOutlineBlankIcon className={classes.sizeIcon} />}
-    indeterminateIcon={<IndeterminateCheckBox className={classes.sizeIcon} />}
-    checkedIcon={<CheckBoxIcon className={classes.sizeIcon} />}
+    indeterminateIcon={<IndeterminateCheckBox className={classes.selectedIcon} />}
+    checkedIcon={<CheckBoxIcon className={classes.selectedIcon} />}
   />
 );
 

@@ -10,8 +10,8 @@ const styles = theme => ({
     height: 30
   },
   sizeIcon: {
-    fontSize: 20,
-    color: "#939cac"
+    fontSize: 24,
+    color: "#ced3df"
   }
 });
 

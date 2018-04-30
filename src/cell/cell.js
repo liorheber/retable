@@ -20,8 +20,18 @@ const getRenderer = type => {
       );
     case "IMAGE":
       return ({ value }) => (
-        <RendererStyle style={{ textAlign: "left" }}>
-          <img src={value} height={52} />
+        <RendererStyle
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            border: " 1px solid #e9ebf0",
+            borderRadius: "3px",
+            maxWidth: "80px",
+            height: "42px",
+            background: "white"
+          }}
+        >
+          <img src={value} height={40} />
         </RendererStyle>
       );
     case "TEXT":
@@ -45,7 +55,7 @@ const CellStyle = styled.div`
   flex-direction: row;
   white-space: nowrap;
   border-right: 1px solid #e9ebf0;
-  align-items: stretch;
+  align-items: center;
   height: 100%;
   justify-content: space-between;
   min-width: ${props => props.width}px;

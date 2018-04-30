@@ -3,7 +3,7 @@ const columns = [
     id: "S1",
     name: "Product",
     type: "IMAGE",
-    width: 180,
+    width: 130,
     editable: true,
     sortable: true,
     resizable: true,
