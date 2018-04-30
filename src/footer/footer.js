@@ -22,10 +22,10 @@ const FooterStyle = styled.div`
 class Footer extends PureComponent {
 
   render() {
-    const { staticColumns, dynamicColumns, width, totals } = this.props;
+    const { dynamicColumns, width, totals } = this.props;
     return (
         <FooterStyle>
-          <StaticFooter columns={staticColumns} width={width} totals={totals}/>
+          <StaticFooter width={width}/>
           <DynamicFooter columns={dynamicColumns} totals={totals}/>
         </FooterStyle>
     );

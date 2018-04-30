@@ -88,7 +88,6 @@ class ReTable extends PureComponent {
             rowHeight={rowHeight}
           />
           <Footer
-            staticColumns={staticColumns}
             dynamicColumns={dynamicColumns}
             width={staticWidth}
             rowHeight={rowHeight}

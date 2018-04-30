@@ -21,7 +21,7 @@ const Static = styled.div`
 
 class StaticFooter extends PureComponent {
   render() {
-    const { columns, width, totals } = this.props;
+    const { width } = this.props;
     return (
       <Static width={width}>
         Total

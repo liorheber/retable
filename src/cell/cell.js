@@ -1,7 +1,6 @@
-import React, {PureComponent, Fragment} from "react";
-import styled from 'styled-components';
+import React, { PureComponent, Fragment } from "react";
+import styled from "styled-components";
 import Header from "../renderers/header/header";
-
 
 const RendererStyle = styled.div`
   padding: 0 14px;
@@ -11,20 +10,32 @@ const RendererStyle = styled.div`
   display: flex;
 `;
 
-const getRenderer = (type) => {
+const getRenderer = type => {
   switch (type) {
     case "HEADER":
-      return ({value}) => <Header value={value}/>;
+      return ({ value }) => <Header value={value} />;
     case "CHANNEL":
-      return ({value = {}}) => <RendererStyle title={value.tooltip}>{value.icon}</RendererStyle>;
+      return ({ value = {} }) => (
+        <RendererStyle title={value.tooltip}>{value.icon}</RendererStyle>
+      );
     case "IMAGE":
-      return ({value}) => <RendererStyle style={{textAlign: "left"}}><img src={value} height={52}/></RendererStyle>;
+      return ({ value }) => (
+        <RendererStyle style={{ textAlign: "left" }}>
+          <img src={value} height={52} />
+        </RendererStyle>
+      );
     case "TEXT":
-      return ({value}) => <RendererStyle>{value}</RendererStyle>;
+      return ({ value }) => <RendererStyle>{value}</RendererStyle>;
     case "NUMBER":
-      return ({value}) => <RendererStyle style={{textAlign: "right", width: "100%"}}>{value}</RendererStyle>;
+      return ({ value }) => (
+        <RendererStyle style={{ textAlign: "right", width: "100%" }}>
+          {value}
+        </RendererStyle>
+      );
     default:
-      return ({value}) => <RendererStyle>{JSON.stringify(value)}</RendererStyle>;
+      return ({ value }) => (
+        <RendererStyle>{JSON.stringify(value)}</RendererStyle>
+      );
   }
 };
 
@@ -41,17 +52,19 @@ const CellStyle = styled.div`
   max-width: ${props => props.width}px;
   position: relative;
   z-index: 1;
+  transition: min-width 0.4s ease, max-width 0.4s ease;
 `;
 
 class Cell extends PureComponent {
   render() {
-    const {width, type, value} = this.props;
+    const { width, type, value } = this.props;
     const Renderer = getRenderer(type);
     return (
-      <CellStyle width={width}><Renderer value={value} /></CellStyle>
-    )
+      <CellStyle width={width}>
+        <Renderer value={value} />
+      </CellStyle>
+    );
   }
 }
-
 
 export default Cell;
