@@ -15,9 +15,7 @@ const RendererStyle = styled.div`
 const getRenderer = type => {
   switch (type) {
     case "HEADER":
-      return ({ value, id, col }) => (
-        <Header value={value} id={id} direction={col.sort} />
-      );
+      return Header;
     case "CHANNEL":
       return ({ value = {} }) => (
         <RendererStyle title={value.tooltip}>{value.icon}</RendererStyle>
@@ -25,9 +23,8 @@ const getRenderer = type => {
     case "IMAGE":
       return ({ value }) => <Image value={value} />;
     case "DATE":
-      return ({value}) => <DateRenderer value={value} type="DATE"/>;
     case "DATETIME":
-      return ({value}) => <DateRenderer value={value} type="DATETIME"/>;
+      return DateRenderer;
     case "TEXT":
       return ({ value }) => <RendererStyle>{value}</RendererStyle>;
     case "NUMBER":
@@ -65,7 +62,7 @@ class Cell extends PureComponent {
     const Renderer = getRenderer(type);
     return (
       <CellStyle width={width}>
-        <Renderer value={value} id={id} col={col}/>
+        <Renderer value={value} id={id} {...col} />
       </CellStyle>
     );
   }

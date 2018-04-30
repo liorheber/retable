@@ -30,7 +30,7 @@ class Header extends PureComponent {
   }
 
   render() {
-    const { value, id, direction } = this.props;
+    const { value, id } = this.props;
     const { hover } = this.state;
     return (
       <Renderer
