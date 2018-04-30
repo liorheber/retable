@@ -3,7 +3,7 @@ const columns = [
     id: "S1",
     name: "Product",
     type: "IMAGE",
-    width: 130,
+    width: 160,
     editable: true,
     sortable: true,
     resizable: true,
@@ -32,7 +32,7 @@ const columns = [
   },
   {
     id: "S2",
-    name: "Product title X",
+    name: "Product title",
     type: "TEXT",
     width: 190,
     minWidth: 80,
@@ -70,19 +70,6 @@ const columns = [
     enableQuickFilter: true,
     filterType: "TEXT",
     comparable: true
-  },
-  {
-    id: "S4",
-    name: "parent_asin",
-    filename: "parent_asin",
-    type: "BOOLEAN",
-    width: 190,
-    editType: "TEXT",
-    editable: true,
-    sortable: true,
-    resizable: true,
-    enableQuickFilter: true,
-    filterType: "NUMERIC"
   },
   {
     id: "S5",
