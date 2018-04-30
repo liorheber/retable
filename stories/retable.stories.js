@@ -12,11 +12,8 @@ storiesOf("React Multi Select", module).add("Default view", () => {
       <div
         style={{
           width: "100%",
-          height: "350px",
-          backgroundImage:
-            "url(https://files.slack.com/files-pri/T0HTGRLKD-FAEGBJLBS/widgets.png)",
-          backgroundSize: "100%",
-          backgroundRepeatX: "no-repeat"
+          height: "260px",
+          background: "#6d6d6d"
         }}
       >
       </div>
