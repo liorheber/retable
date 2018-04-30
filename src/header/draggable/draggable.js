@@ -49,7 +49,7 @@ class Resize extends PureComponent {
   moveLine(event) {
     const { marker } = this.props;
     const markerLine = ReactDOM.findDOMNode(marker.current);
-    markerLine.style.left = event.screenX - 14 + "px";
+    markerLine.style.left = event.clientX - 2 + "px";
   }
 
   render() {

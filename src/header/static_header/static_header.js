@@ -25,8 +25,7 @@ class StaticHeader extends PureComponent {
     const {
       columns,
       width,
-      commitResize,
-      isAllSelected
+      commitResize
     } = this.props;
     return (
       <Static width={width}>
