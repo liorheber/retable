@@ -1,6 +1,8 @@
 import React, { PureComponent, Fragment } from "react";
 import styled from "styled-components";
 import Header from "../renderers/header/header";
+import Image from "../renderers/image/image";
+import DateRenderer from "../renderers/date/date";
 
 const RendererStyle = styled.div`
   padding: 0 14px;
@@ -13,27 +15,19 @@ const RendererStyle = styled.div`
 const getRenderer = type => {
   switch (type) {
     case "HEADER":
-      return ({ value, id, col }) => <Header value={value} id={id} direction={col.sort}/>;
+      return ({ value, id, col }) => (
+        <Header value={value} id={id} direction={col.sort} />
+      );
     case "CHANNEL":
       return ({ value = {} }) => (
         <RendererStyle title={value.tooltip}>{value.icon}</RendererStyle>
       );
     case "IMAGE":
-      return ({ value }) => (
-        <RendererStyle
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            border: " 1px solid #e9ebf0",
-            borderRadius: "3px",
-            maxWidth: "80px",
-            height: "42px",
-            background: "white"
-          }}
-        >
-          <img src={value} height={40} />
-        </RendererStyle>
-      );
+      return ({ value }) => <Image value={value} />;
+    case "DATE":
+      return ({value}) => <DateRenderer value={value} type="DATE"/>;
+    case "DATETIME":
+      return ({value}) => <DateRenderer value={value} type="DATETIME"/>;
     case "TEXT":
       return ({ value }) => <RendererStyle>{value}</RendererStyle>;
     case "NUMBER":

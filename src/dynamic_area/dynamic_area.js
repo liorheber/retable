@@ -21,9 +21,16 @@ class DynamicArea extends PureComponent {
       <ScrollSyncPane>
         <Dynamic>
           {rows.map((row, index) => (
-            <Row rowHeight={rowHeight} key={index} index={index}  width={width}>
+            <Row rowHeight={rowHeight} key={index} index={index} width={width}>
               {columns.map((col, index) => (
-                <Cell width={col.width} key={index} className={`col-${col.id}`} type={col.type} value={row[col.id]}/>
+                <Cell
+                  width={col.width}
+                  key={index}
+                  className={`col-${col.id}`}
+                  type={col.type}
+                  value={row[col.id]}
+                  col={col}
+                />
               ))}
             </Row>
           ))}

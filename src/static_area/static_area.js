@@ -23,12 +23,7 @@ const Static = styled.div`
 
 class StaticArea extends PureComponent {
   render() {
-    const {
-      rows,
-      columns,
-      width,
-      rowHeight
-    } = this.props;
+    const { rows, columns, width, rowHeight } = this.props;
     return (
       <Static width={width}>
         {rows.map((row, index) => (
@@ -60,6 +55,7 @@ class StaticArea extends PureComponent {
                 className={`col-${col.id}`}
                 type={col.type}
                 value={row[col.id]}
+                col={col}
               />
             ))}
           </Row>
