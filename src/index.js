@@ -8,6 +8,7 @@ import Footer from "./footer/footer";
 import Grid from "./grid/grid";
 import withResize from "./with_resize/with_resize";
 import withSelection from "./with_selection/with_selection";
+import Body from "./body/body";
 
 injectGlobal`
   @font-face {
@@ -19,7 +20,6 @@ injectGlobal`
 `;
 
 class ReTable extends PureComponent {
-
   static defaultProps = {
     rowHeight: 60
   };
@@ -56,7 +56,6 @@ class ReTable extends PureComponent {
     });
   }
 
-
   render() {
     const { rows, rowHeight } = this.props;
     const { staticColumns, dynamicColumns } = this.state;
@@ -78,20 +77,14 @@ class ReTable extends PureComponent {
             width={staticWidth}
             commitResize={this.commitResize}
           />
-          <div style={{ display: "flex" }}>
-            <StaticArea
-              rows={rows}
-              columns={staticColumns}
-              rowHeight={rowHeight}
-              width={staticWidth}
-            />
-            <DynamicArea
-              rows={rows}
-              columns={dynamicColumns}
-              rowHeight={rowHeight}
-              width={dynamicWidth}
-            />
-          </div>
+          <Body
+            rows={rows}
+            staticColumns={staticColumns}
+            staticWidth={staticWidth}
+            dynamicColumns={dynamicColumns}
+            dynamicWidth={dynamicWidth}
+            rowHeight={rowHeight}
+          />
           <Footer
             staticColumns={staticColumns}
             dynamicColumns={dynamicColumns}
