@@ -2,8 +2,6 @@ import React, { PureComponent, Fragment } from "react";
 import { ScrollSyncPane } from "react-scroll-sync";
 import styled from "styled-components";
 
-import Cell from "../../cell/cell";
-
 const Static = styled.div`
   overflow: hidden;
   position: relative;
@@ -13,22 +11,20 @@ const Static = styled.div`
   max-width: ${props => props.width + 80}px;
   display: flex;
   flex-direction: row;
-`;
-
-const Row = styled.div`
-  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 24px;
+  box-sizing: border-box;
+  border-right: 1px solid #e9ebf0;
+  text-transform: uppercase;
 `;
 
 class StaticFooter extends PureComponent {
   render() {
-    const { columns, width } = this.props;
+    const { columns, width, totals } = this.props;
     return (
       <Static width={width}>
-        {columns.map((col, index) => (
-          <Cell width={col.width + 80} className={`col-${col.id}`} key={index}>
-            {col.name}
-          </Cell>
-        ))}
+        Total
       </Static>
     );
   }

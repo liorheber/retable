@@ -21,7 +21,9 @@ injectGlobal`
 
 class ReTable extends PureComponent {
   static defaultProps = {
-    rowHeight: 60
+    rowHeight: 60,
+    rows: [],
+    totals: []
   };
 
   constructor(props) {
@@ -57,7 +59,7 @@ class ReTable extends PureComponent {
   }
 
   render() {
-    const { rows, rowHeight } = this.props;
+    const { rows, rowHeight, totals } = this.props;
     const { staticColumns, dynamicColumns } = this.state;
 
     const dynamicWidth = dynamicColumns.reduce(
@@ -90,6 +92,7 @@ class ReTable extends PureComponent {
             dynamicColumns={dynamicColumns}
             width={staticWidth}
             rowHeight={rowHeight}
+            totals={totals}
           />
         </Grid>
       </ScrollSync>

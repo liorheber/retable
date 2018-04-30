@@ -16,16 +16,17 @@ const FooterStyle = styled.div`
   height: 52px;
   margin-top: -30px;
   box-shadow: 0px -1px 6px 0px #E9EBF0;
+  color: #000000;
 `;
 
 class Footer extends PureComponent {
 
   render() {
-    const { staticColumns, dynamicColumns, width, rowHeight } = this.props;
+    const { staticColumns, dynamicColumns, width, totals } = this.props;
     return (
-        <FooterStyle rowHeight={rowHeight}>
-          <StaticFooter columns={staticColumns} width={width}/>
-          <DynamicFooter columns={dynamicColumns}/>
+        <FooterStyle>
+          <StaticFooter columns={staticColumns} width={width} totals={totals}/>
+          <DynamicFooter columns={dynamicColumns} totals={totals}/>
         </FooterStyle>
     );
   }

@@ -22,11 +22,17 @@ const Row = styled.div`
 class DynamicFooter extends PureComponent {
 
   render() {
-    const { columns } = this.props;
+    const { columns, totals } = this.props;
     return (
           <ScrollSyncPane>
             <Dynamic>
-              {columns.map((col, index) => <Cell width={col.width} className={`col-${col.id}`} key={index}>{col.name}</Cell>)}
+              {columns.map((col, index) => <Cell
+                width={col.width}
+                key={index}
+                className={`col-${col.id}`}
+                type={col.type}
+                value={totals[col.id]}
+              />)}
             </Dynamic>
           </ScrollSyncPane>
     );

@@ -16,7 +16,7 @@ const getRenderer = (type) => {
     case "HEADER":
       return ({value}) => <Header value={value}/>;
     case "CHANNEL":
-      return ({value}) => <RendererStyle title={value.tooltip}>{value.icon}</RendererStyle>;
+      return ({value = {}}) => <RendererStyle title={value.tooltip}>{value.icon}</RendererStyle>;
     case "IMAGE":
       return ({value}) => <RendererStyle style={{textAlign: "left"}}><img src={value} height={52}/></RendererStyle>;
     case "TEXT":

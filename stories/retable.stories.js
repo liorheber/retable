@@ -4,6 +4,7 @@ import ReTable from "../src/index";
 
 import columns from "./columns";
 import rows from "./rows";
+import totals from "./totals";
 
 storiesOf("React Multi Select", module).add("Default view", () => {
   return (
@@ -19,7 +20,7 @@ storiesOf("React Multi Select", module).add("Default view", () => {
         }}
       >
       </div>
-      <ReTable columns={columns} rows={rows} />
+      <ReTable columns={columns} rows={rows} totals={totals}/>
     </div>
   );
 });
