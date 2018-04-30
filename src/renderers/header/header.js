@@ -2,6 +2,7 @@ import React, { PureComponent, Fragment } from "react";
 import styled from "styled-components";
 
 import { SortConsumer } from "../../with_sort/with_sort";
+import { FilterConsumer } from "../../with_filter/with_filter";
 
 import Renderer from "../renderer";
 import Filter from "../../components/filter/filter";
@@ -53,7 +54,9 @@ class Header extends PureComponent {
               );
             }}
           </SortConsumer>
-          <Filter hover={hover} />
+          <FilterConsumer>
+            {({ openFilter }) => <Filter hover={hover} onClick={openFilter} />}
+          </FilterConsumer>
         </div>
       </Renderer>
     );

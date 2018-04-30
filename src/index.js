@@ -1,8 +1,6 @@
 import React, { PureComponent, Fragment } from "react";
 import { ScrollSync, ScrollSyncPane } from "react-scroll-sync";
-import styled, { injectGlobal } from "styled-components";
-import StaticArea from "./static_area/static_area";
-import DynamicArea from "./dynamic_area/dynamic_area";
+import { injectGlobal } from "styled-components";
 import Header from "./header/header";
 import Footer from "./footer/footer";
 import Grid from "./grid/grid";
@@ -10,6 +8,7 @@ import withResize from "./with_resize/with_resize";
 import withSelection from "./with_selection/with_selection";
 import Body from "./body/body";
 import withSort from "./with_sort/with_sort";
+import withFilter from "./with_filter/with_filter";
 
 injectGlobal`
   @font-face {
@@ -100,4 +99,4 @@ class ReTable extends PureComponent {
   }
 }
 
-export default withSort(withSelection(withResize(ReTable)));
+export default withFilter(withSort(withSelection(withResize(ReTable))));

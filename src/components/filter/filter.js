@@ -26,12 +26,13 @@ const styles = theme => ({
 class Filter extends PureComponent {
   constructor(props) {
     super(props);
+    this.button = React.createRef();
   }
 
   render() {
-    const { classes, hover } = this.props;
+    const { classes, hover, onClick } = this.props;
     return (
-      <IconButton className={classes.size}>
+      <IconButton className={classes.size} onClick={() => onClick(this.button)} ref={this.button}>
           <FilterIcon className={hover ? classes.sizeIcon : classes.hiddenIcon} />
       </IconButton>
     );
