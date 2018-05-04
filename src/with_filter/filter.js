@@ -5,14 +5,50 @@ import TextField from "material-ui/TextField";
 import IconButton from "material-ui/IconButton";
 import Close from "@material-ui/icons/Close";
 import { withStyles } from "material-ui/styles";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const filterInAnimation = keyframes`
+  0% {
+    transform-origin: top;
+    transform:scaleY(0);
+    opacity: 0;
+  }
+  50% {
+    transform-origin: top;
+    transform:scaleY(.005);
+    opacity: 0.1;
+  }
+  100% {
+    transform-origin: top;
+    transform:scaleY(1);
+    opacity: 1;
+  }
+`;
+
+const filterOutAnimation = keyframes`
+  0% {
+    transform-origin: top;
+    transform:scaleY(1);
+    opacity: 1;
+  }
+  50% {
+    transform-origin: top;
+    transform:scaleY(.005);
+    opacity: 0.1;
+  }
+  100% {
+    transform-origin: top;
+    transform:scaleY(0);
+    opacity: 0;
+  }
+`;
 
 const Content = styled.div`
   padding: 14px;
 `;
 
 const FilterWrapper = styled.div`
-  display: ${props => (props.isOpen ? "block" : "none")};
+  animation: ${props => (props.isOpen ? filterInAnimation : filterOutAnimation)} 0.4s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
   position: fixed;
   z-index: 1000;
 `;
@@ -23,7 +59,7 @@ const Header = styled.div`
   justify-content: space-between;
   padding: 14px 4px 14px 14px;
   background: #939cac;
-  color: ${props => props.theme.background};
+  color: white;
   line-height: 30px;
 `;
 
