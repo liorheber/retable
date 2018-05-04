@@ -22,19 +22,16 @@ class Header extends PureComponent {
     const {
       staticColumns,
       dynamicColumns,
-      width,
-      commitResize,
+      width
     } = this.props;
     return (
       <HeaderStyle>
         <StaticHeader
           columns={staticColumns}
           width={width}
-          commitResize={commitResize}
         />
         <DynamicHeader
           columns={dynamicColumns}
-          commitResize={commitResize}
         />
       </HeaderStyle>
     );

@@ -9,6 +9,7 @@ import withSelection from "./with_selection/with_selection";
 import Body from "./body/body";
 import withSort from "./with_sort/with_sort";
 import withFilter from "./with_filter/with_filter";
+import withColumns from "./with_columns/with_columns";
 
 import defaultTheme from "./themes/default";
 
@@ -31,39 +32,17 @@ class ReTable extends PureComponent {
 
   constructor(props) {
     super(props);
-    this.commitResize = this.commitResize.bind(this);
-
-    const staticColumns = props.columns.filter(
-      col => col.defaultInColumnSelection
-    );
-    const dynamicColumns = props.columns.filter(
-      col => !col.defaultInColumnSelection
-    );
-
-    this.state = {
-      columns: props.columns,
-      staticColumns,
-      dynamicColumns
-    };
-  }
-
-  commitResize(id, width) {
-    const { dynamicColumns, staticColumns } = this.state;
-    const newDynamicColumns = dynamicColumns.map(
-      col => (col.id === id ? { ...col, width } : col)
-    );
-    const newStaticColumns = staticColumns.map(
-      col => (col.id === id ? { ...col, width } : col)
-    );
-    this.setState({
-      dynamicColumns: newDynamicColumns,
-      staticColumns: newStaticColumns
-    });
   }
 
   render() {
-    const { rows, rowHeight, totals, theme } = this.props;
-    const { staticColumns, dynamicColumns } = this.state;
+    const {
+      rows,
+      rowHeight,
+      totals,
+      theme,
+      staticColumns,
+      dynamicColumns
+    } = this.props;
 
     const dynamicWidth = dynamicColumns.reduce(
       (width, col) => width + col.width + 1,
@@ -81,7 +60,6 @@ class ReTable extends PureComponent {
               staticColumns={staticColumns}
               dynamicColumns={dynamicColumns}
               width={staticWidth}
-              commitResize={this.commitResize}
             />
             <Body
               rows={rows}
@@ -104,4 +82,6 @@ class ReTable extends PureComponent {
   }
 }
 
-export default withFilter(withSort(withSelection(withResize(ReTable))));
+export default withColumns(
+  withFilter(withSort(withSelection(withResize(ReTable))))
+);

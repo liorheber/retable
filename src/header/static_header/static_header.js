@@ -24,8 +24,7 @@ class StaticHeader extends PureComponent {
   render() {
     const {
       columns,
-      width,
-      commitResize
+      width
     } = this.props;
     return (
       <Static width={width}>
@@ -44,7 +43,6 @@ class StaticHeader extends PureComponent {
         {columns.map((col, index) => (
           <HeaderCell
             key={index}
-            commitResize={commitResize}
             value={col.name}
             {...col}
           />

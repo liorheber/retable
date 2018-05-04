@@ -20,14 +20,13 @@ const Row = styled.div`
 
 class DynamicHeader extends PureComponent {
   render() {
-    const { columns, commitResize } = this.props;
+    const { columns } = this.props;
     return (
       <ScrollSyncPane>
         <Dynamic>
           {columns.map((col, index) => (
             <HeaderCell
               key={index}
-              commitResize={commitResize}
               value={col.name}
               {...col}
             />
