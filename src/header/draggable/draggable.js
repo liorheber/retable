@@ -30,7 +30,7 @@ class Resize extends PureComponent {
     const { marker, resizeStart } = this.props;
     const markerLine = ReactDOM.findDOMNode(marker.current);
     const draggableLine = ReactDOM.findDOMNode(this.draggable.current);
-    markerLine.style.left = event.screenX - 14 + "px";
+    markerLine.style.left = event.screenX - 50 + "px";
     markerLine.style.top = draggableLine.getBoundingClientRect().top + "px";
     this.setState({ lastX: draggableData.lastX });
     resizeStart();
@@ -52,7 +52,7 @@ class Resize extends PureComponent {
     event.preventDefault();
     const { marker } = this.props;
     const markerLine = ReactDOM.findDOMNode(marker.current);
-    markerLine.style.left = event.clientX - 2 + "px";
+    markerLine.style.left = event.clientX - 40 + "px";
   }
 
   render() {
