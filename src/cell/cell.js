@@ -45,7 +45,7 @@ const CellStyle = styled.div`
   display: flex;
   flex-direction: row;
   white-space: nowrap;
-  border-right: 1px solid #e9ebf0;
+  border-right: 1px solid ${props => props.theme.columnBorder};
   align-items: center;
   height: 100%;
   justify-content: space-between;

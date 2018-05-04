@@ -9,7 +9,7 @@ const Dynamic = styled.div`
   overflow: auto;
   position: relative;
   z-index: 2;
-  background: white;
+  background: ${props => props.theme.background};
   display: flex;
   flex-direction: row;
 `;

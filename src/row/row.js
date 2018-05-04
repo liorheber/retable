@@ -12,8 +12,8 @@ const RowStyle = styled.div`
   max-height: ${props => props.rowHeight}px;
   min-height: ${props => props.rowHeight}px;
   transition: background-color 0.2s ease;
-  background-color: ${props => props.selected ? "#f4f1fd !important" : "white"};
-  box-shadow: 0px 3px 10px 0px #e9ebf0;
+  background-color: ${props => props.selected ? `${props.theme.selectedBackground} !important` : props.theme.background};
+  box-shadow: 0px 3px 10px 0px ${props => props.theme.rowBorder};
   margin: 1px 0 0 0;
   align-items: center;
   height: 100%;

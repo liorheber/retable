@@ -10,11 +10,11 @@ const HeaderStyle = styled.div`
   z-index: 2;
   top: 0;
   z-index: 3;
-  background: white;
+  background: ${props => props.theme.background};
   overflow: hidden;
   white-space: nowrap;
   height: 52px;
-  box-shadow: 0px 1px 6px 0px #e9ebf0;
+  box-shadow: 0px 1px 6px 0px ${props => props.theme.rowBorder};
 `;
 
 class Header extends PureComponent {

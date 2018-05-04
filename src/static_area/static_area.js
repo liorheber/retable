@@ -12,7 +12,7 @@ const Static = styled.div`
   overflow-x: hidden;
   position: relative;
   z-index: 2;
-  background: white;
+  background: ${props => props.theme.background};
   min-width: ${props => props.width + 80}px;
   max-width: ${props => props.width + 80}px;
   display: flex;

@@ -11,7 +11,7 @@ const ImageStyle = styled.div`
   max-width: 80px;
   min-width: 80px;
   height: 42px;
-  background: white;
+  background: ${props => props.theme.background};
 `;
 
 class Image extends PureComponent {

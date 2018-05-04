@@ -10,7 +10,7 @@ import Sort from "../../components/sort/sort";
 
 const HeaderStyle = styled.div`
   text-transform: uppercase;
-  color: #939cac;
+  color: ${props => props.theme.headerFontColor};
   white-space: normal;
 `;
 

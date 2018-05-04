@@ -10,13 +10,13 @@ const FooterStyle = styled.div`
   z-index: 2;
   bottom: 0;
   z-index: 3;
-  background: white;
+  background: ${props => props.theme.background};
   overflow: hidden;
   white-space: nowrap;
   height: 52px;
   margin-top: -30px;
-  box-shadow: 0px -1px 6px 0px #E9EBF0;
-  color: #000000;
+  box-shadow: 0px -1px 6px 0px ${props => props.theme.rowBorder};
+  color: ${props => props.theme.footerFontColor};
 `;
 
 class Footer extends PureComponent {

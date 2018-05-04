@@ -1,6 +1,6 @@
 import React, { PureComponent, Fragment } from "react";
 import { ScrollSync, ScrollSyncPane } from "react-scroll-sync";
-import { injectGlobal } from "styled-components";
+import { injectGlobal, ThemeProvider } from "styled-components";
 import Header from "./header/header";
 import Footer from "./footer/footer";
 import Grid from "./grid/grid";
@@ -9,6 +9,8 @@ import withSelection from "./with_selection/with_selection";
 import Body from "./body/body";
 import withSort from "./with_sort/with_sort";
 import withFilter from "./with_filter/with_filter";
+
+import defaultTheme from "./themes/default";
 
 injectGlobal`
   @font-face {
@@ -23,7 +25,8 @@ class ReTable extends PureComponent {
   static defaultProps = {
     rowHeight: 60,
     rows: [],
-    totals: []
+    totals: [],
+    theme: defaultTheme
   };
 
   constructor(props) {
@@ -59,7 +62,7 @@ class ReTable extends PureComponent {
   }
 
   render() {
-    const { rows, rowHeight, totals } = this.props;
+    const { rows, rowHeight, totals, theme } = this.props;
     const { staticColumns, dynamicColumns } = this.state;
 
     const dynamicWidth = dynamicColumns.reduce(
@@ -71,30 +74,32 @@ class ReTable extends PureComponent {
       0
     );
     return (
-      <ScrollSync>
-        <Grid>
-          <Header
-            staticColumns={staticColumns}
-            dynamicColumns={dynamicColumns}
-            width={staticWidth}
-            commitResize={this.commitResize}
-          />
-          <Body
-            rows={rows}
-            staticColumns={staticColumns}
-            staticWidth={staticWidth}
-            dynamicColumns={dynamicColumns}
-            dynamicWidth={dynamicWidth}
-            rowHeight={rowHeight}
-          />
-          <Footer
-            dynamicColumns={dynamicColumns}
-            width={staticWidth}
-            rowHeight={rowHeight}
-            totals={totals}
-          />
-        </Grid>
-      </ScrollSync>
+      <ThemeProvider theme={theme}>
+        <ScrollSync>
+          <Grid>
+            <Header
+              staticColumns={staticColumns}
+              dynamicColumns={dynamicColumns}
+              width={staticWidth}
+              commitResize={this.commitResize}
+            />
+            <Body
+              rows={rows}
+              staticColumns={staticColumns}
+              staticWidth={staticWidth}
+              dynamicColumns={dynamicColumns}
+              dynamicWidth={dynamicWidth}
+              rowHeight={rowHeight}
+            />
+            <Footer
+              dynamicColumns={dynamicColumns}
+              width={staticWidth}
+              rowHeight={rowHeight}
+              totals={totals}
+            />
+          </Grid>
+        </ScrollSync>
+      </ThemeProvider>
     );
   }
 }

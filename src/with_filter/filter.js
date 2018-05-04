@@ -23,7 +23,7 @@ const Header = styled.div`
   justify-content: space-between;
   padding: 14px 4px 14px 14px;
   background: #939cac;
-  color: white;
+  color: ${props => props.theme.background};
   line-height: 30px;
 `;
 
