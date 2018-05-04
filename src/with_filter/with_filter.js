@@ -23,10 +23,12 @@ const withFilter = WrappedComponent =>
     }
 
     setPlacement(buttonNode, filterNode) {
+      console.log();
       const { top, height, left } = buttonNode.getBoundingClientRect();
       const { width } = filterNode.getBoundingClientRect();
-      filterNode.style.left = left - width/2 + "px";
-      filterNode.style.top = top + height + 24 + "px";
+      const leftPosition = window.innerWidth - left > 300 ? left - width/2 : left - width;
+      filterNode.style.left = leftPosition + "px";
+      filterNode.style.top = top + height + 12 + "px";
     }
 
     render() {

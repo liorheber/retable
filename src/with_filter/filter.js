@@ -48,7 +48,7 @@ const Content = styled.div`
 `;
 
 const FilterWrapper = styled.div`
-  animation: ${props => (props.isOpen ? filterInAnimation : filterOutAnimation)} 0.4s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+  animation: ${props => (props.isOpen ? filterInAnimation : filterOutAnimation)} 0.4s cubic-bezier(0.17, 0.84, 0.49, 1.29) forwards;
   position: fixed;
   z-index: 1000;
 `;
@@ -57,7 +57,7 @@ const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 4px 14px 14px;
+  padding: 6px 4px 6px 14px;
   background: #939cac;
   color: white;
   line-height: 30px;
@@ -67,7 +67,7 @@ const Actions = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px;
+  padding: 2px 14px;
   border-top: 1px solid #e9ebf0;
 `;
 
@@ -95,10 +95,12 @@ class Filter extends PureComponent {
 
   componentDidMount() {
     window.addEventListener("mousedown", this.handleClickOutside);
+    window.addEventListener("scroll", this.handleClickOutside);
   }
 
   componentWillUnmount() {
     window.removeEventListener("mousedown", this.handleClickOutside);
+    window.removeEventListener("scroll", this.handleClickOutside);
   }
 
   handleClickOutside(event) {
