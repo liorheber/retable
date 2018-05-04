@@ -7,8 +7,6 @@ import Close from "@material-ui/icons/Close";
 import { withStyles } from "material-ui/styles";
 import styled from "styled-components";
 
-import { FilterConsumer } from "./with_filter";
-
 const Content = styled.div`
   padding: 14px;
 `;
@@ -53,30 +51,47 @@ const styles = theme => ({
 });
 
 class Filter extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.filter = React.createRef();
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener("mousedown", this.handleClickOutside);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("mousedown", this.handleClickOutside);
+  }
+
+  handleClickOutside(event) {
+    const { closeFilter, isOpen } = this.props;
+    if (isOpen && this.filter.current && !this.filter.current.contains(event.target)) {
+      closeFilter();
+    }
+  }
+
   render() {
-    const { classes, isOpen } = this.props;
+    const { classes, isOpen, closeFilter } = this.props;
     return (
-      <FilterWrapper isOpen={isOpen}>
-        <Paper className={classes.paper}>
-          <Header>
-            Filter By
-            <FilterConsumer>
-              {({ closeFilter }) => (
-                <IconButton className={classes.close} onClick={closeFilter}>
-                  <Close className={classes.closeIcon} />
-                </IconButton>
-              )}
-            </FilterConsumer>
-          </Header>
-          <Content>
-            <TextField/>
-          </Content>
-          <Actions>
-          <Button>Clear Filter</Button>
-          <Button>Apply</Button>
-          </Actions>
-        </Paper>
-      </FilterWrapper>
+        <FilterWrapper isOpen={isOpen} innerRef={this.filter}>
+          <Paper className={classes.paper}>
+            <Header>
+              Filter By
+              <IconButton className={classes.close} onClick={closeFilter}>
+                <Close className={classes.closeIcon} />
+              </IconButton>
+            </Header>
+            <Content>
+              <TextField />
+            </Content>
+            <Actions>
+              <Button>Clear Filter</Button>
+              <Button>Apply</Button>
+            </Actions>
+          </Paper>
+        </FilterWrapper>
     );
   }
 }

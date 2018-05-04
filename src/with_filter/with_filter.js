@@ -30,11 +30,11 @@ const withFilter = WrappedComponent =>
     }
 
     render() {
-      const { isOpen } = this.state;
+      const { isOpen, closeFilter } = this.state;
       return (
         <Context.Provider value={this.state}>
           <WrappedComponent {...this.props} />
-          <Filter ref={this.filter} isOpen={isOpen} />
+          <Filter ref={this.filter} isOpen={isOpen} closeFilter={closeFilter}/>
         </Context.Provider>
       );
     }
