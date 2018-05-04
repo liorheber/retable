@@ -17,10 +17,6 @@ const Grid = styled.div`
   .row-hover {
     background-color: #f9f8fe;
   }
-
-  .row-selected {
-    background-color: #f4f1fd;
-  }
 `;
 
 export default Grid;

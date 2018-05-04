@@ -12,7 +12,7 @@ const RowStyle = styled.div`
   max-height: ${props => props.rowHeight}px;
   min-height: ${props => props.rowHeight}px;
   transition: background-color 0.2s ease;
-  background-color: white;
+  background-color: ${props => props.selected ? "#f4f1fd !important" : "white"};
   box-shadow: 0px 3px 10px 0px #e9ebf0;
   margin: 1px 0 0 0;
   align-items: center;
@@ -50,9 +50,8 @@ class Row extends PureComponent {
             rowHeight={rowHeight}
             key={index}
             width={width}
-            className={`row-${index} ${
-              selection.includes(index) ? "row-selected" : ""
-            }`}
+            className={`row-${index}`}
+            selected={selection.includes(index)}
             onMouseEnter={this.onMouseEnter}
             onMouseLeave={this.onMouseLeave}
             onClick={() => onSelectRow(index)}
