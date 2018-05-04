@@ -45,12 +45,14 @@ class Row extends PureComponent {
     const { children, index, rowHeight, width } = this.props;
     return (
       <SelectionConsumer>
-        {({onSelectRow}) => (
+        {({ onSelectRow, selection }) => (
           <RowStyle
             rowHeight={rowHeight}
             key={index}
             width={width}
-            className={`row-${index}`}
+            className={`row-${index} ${
+              selection.includes(index) ? "row-selected" : ""
+            }`}
             onMouseEnter={this.onMouseEnter}
             onMouseLeave={this.onMouseLeave}
             onClick={() => onSelectRow(index)}

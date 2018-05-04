@@ -18,16 +18,7 @@ const withSelection = WrappedComponent =>
           const { rows } = this.props;
           const { selection } = this.state;
           const isAllSelected = selection.length === rows.length;
-          const newSelection = [];
-          rows.forEach((item, index) => {
-            const row = document.getElementsByClassName(`row-${index}`);
-            if (isAllSelected) {
-              this.removeSelection(row);
-            } else {
-              this.addSelection(row);
-              newSelection.push(index);
-            }
-          });
+          const newSelection = isAllSelected ? [] : rows.map((item, index) => index);
           this.setState({ selection: newSelection });
         }
       };
@@ -36,12 +27,9 @@ const withSelection = WrappedComponent =>
     handleSelection(index, isSelected, event) {
       event && event.stopPropagation();
       const { selection } = this.state;
-      const row = document.getElementsByClassName(`row-${index}`);
       if (isSelected) {
-        this.removeSelection(row);
         this.setState({ selection: selection.filter(id => id !== index) });
       } else {
-        this.addSelection(row);
         const newSelection = selection.slice();
         newSelection.push(index);
         this.setState({ selection: newSelection });
@@ -49,23 +37,9 @@ const withSelection = WrappedComponent =>
     }
 
     removeSelections(index, isSelected) {
-      const rows = document.getElementsByClassName(`row-selected`);
-      while (rows.length) {
-        rows[0].classList.remove("row-selected");
-      }
       this.setState({ selection: [] }, () =>
         this.handleSelection(index, isSelected)
       );
-    }
-
-    removeSelection(row) {
-      row[0].classList.remove("row-selected");
-      row[1].classList.remove("row-selected");
-    }
-
-    addSelection(row) {
-      row[0].classList.add("row-selected");
-      row[1].classList.add("row-selected");
     }
 
     render() {
@@ -74,7 +48,7 @@ const withSelection = WrappedComponent =>
       const isAllSelected = selection.length === rows.length;
       return (
         <Context.Provider value={{...this.state, isAllSelected}}>
-          <WrappedComponent {...this.props} selection={selection} />
+          <WrappedComponent {...this.props} />
         </Context.Provider>
       );
     }
