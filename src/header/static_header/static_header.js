@@ -6,7 +6,7 @@ import ExpandCollapse from "../../components/expand_collapse/expand_collapse";
 
 import HeaderCell from "../header_cell/header_cell";
 
-import { SelectionConsumer } from "../../with_selection/with_selection";
+import { SelectionConsumer } from "../../features/with_selection/with_selection";
 
 const Static = styled.div`
   overflow: hidden;

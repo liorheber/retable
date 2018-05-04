@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment } from "react";
 import { ScrollSyncPane } from "react-scroll-sync";
 import styled from "styled-components";
 
-import { SelectionConsumer } from "../with_selection/with_selection";
+import { SelectionConsumer } from "../features/with_selection/with_selection";
 import Row from "../row/row";
 import Cell from "../cell/cell";
 import RowActions from "../row/row_actions";

@@ -4,12 +4,12 @@ import { injectGlobal, ThemeProvider } from "styled-components";
 import Header from "./header/header";
 import Footer from "./footer/footer";
 import Grid from "./grid/grid";
-import withResize from "./with_resize/with_resize";
-import withSelection from "./with_selection/with_selection";
+import withResize from "./features/with_resize/with_resize";
+import withSelection from "./features/with_selection/with_selection";
 import Body from "./body/body";
-import withSort from "./with_sort/with_sort";
-import withFilter from "./with_filter/with_filter";
-import withColumns from "./with_columns/with_columns";
+import withSort from "./features/with_sort/with_sort";
+import withFilter from "./features/with_filter/with_filter";
+import withColumns from "./features/with_columns/with_columns";
 
 import defaultTheme from "./themes/default";
 

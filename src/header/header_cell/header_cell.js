@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import Cell from "../../cell/cell";
 import Resize from "../draggable/draggable";
-import { ResizeConsumer } from "../../with_resize/with_resize";
+import { ResizeConsumer } from "../../features/with_resize/with_resize";
 
 const HeaderCellStyle = styled.div`
   position: relative;

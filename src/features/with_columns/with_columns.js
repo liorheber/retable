@@ -46,6 +46,6 @@ const withColumns = WrappedComponent =>
     }
   };
 
-export const ResizeConsumer = Context.Consumer;
+export const ColumnsConsumer = Context.Consumer;
 
 export default withColumns;
