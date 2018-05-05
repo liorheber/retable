@@ -1,7 +1,8 @@
 import React, { PureComponent } from "react";
 import ReTable from "../src/index";
 
-import Switch from "material-ui/Switch";
+import Switch from "./components/switch";
+import NumberSelector from "./components/number_selector";
 import {
   FormGroup,
   FormControlLabel,
@@ -13,19 +14,13 @@ import columns from "./columns";
 import rows from "./rows";
 import totals from "./totals";
 
-const SwitchComponent = ({ onChange, checked, label }) => (
-  <FormControlLabel
-    control={<Switch checked={checked} onChange={onChange} color="primary"/>}
-    label={label}
-  />
-);
-
 class Table extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
       withSelection: true,
-      withTree: true
+      withTree: true,
+      rowHeight: 3
     };
   }
 
@@ -34,35 +29,57 @@ class Table extends PureComponent {
     this.setState({ withSelection: !withSelection });
   };
 
+  decreaseRowHeight = () => {
+    const { rowHeight } = this.state;
+    this.setState({ rowHeight: rowHeight - 1 });
+  };
+
+  increaseRowHeight = () => {
+    const { rowHeight } = this.state;
+    console.log("increase");
+    this.setState({ rowHeight: rowHeight + 1 });
+  };
+
   toggleWithTree = () => {
     const { withTree } = this.state;
     this.setState({ withTree: !withTree });
   };
 
   render() {
-    const { withSelection, withTree } = this.state;
+    const { withSelection, withTree, rowHeight } = this.state;
     return (
       <div>
         <div
           style={{
-            width: "100%",
             height: "260px",
-            background: "#e4e4e4",
+            background: "#f3f3f3",
             padding: "14px",
+            boxShadow: "0px -14px 30px -25px #000000a3 inset"
           }}
         >
-          <FormControl>
+          <FormControl style={{width: "250px"}}>
             <FormLabel>Boolean Props</FormLabel>
             <FormGroup>
-              <SwitchComponent
+              <Switch
                 onChange={this.toggleWithSelection}
                 checked={withSelection}
                 label="withSelection"
               />
-              <SwitchComponent
+              <Switch
                 onChange={this.toggleWithTree}
                 checked={withTree}
                 label="withTree"
+              />
+            </FormGroup>
+          </FormControl>
+          <FormControl style={{width: "250px"}}>
+            <FormLabel>Number Props</FormLabel>
+            <FormGroup>
+              <NumberSelector
+                decrease={this.decreaseRowHeight}
+                increase={this.increaseRowHeight}
+                label="rowHeight"
+                size={rowHeight}
               />
             </FormGroup>
           </FormControl>
@@ -73,6 +90,7 @@ class Table extends PureComponent {
           totals={totals}
           withSelection={withSelection}
           withTree={withTree}
+          rowHeight={60 + (rowHeight - 3) * 6}
         />
       </div>
     );
