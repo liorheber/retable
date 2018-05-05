@@ -11,8 +11,9 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@storybook/addon-options": "^3.4.1",
-    "@storybook/react": "^3.4.1",
+    "@storybook/addon-options": "^3.4.3",
+    "@storybook/addons": "^3.4.3",
+    "@storybook/react": "^3.4.3",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
