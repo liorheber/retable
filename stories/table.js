@@ -36,7 +36,8 @@ class Table extends PureComponent {
       withSelection: true,
       withTree: true,
       rowHeight: 3,
-      theme: "Default"
+      theme: "Default",
+      columns: columns
     };
   }
 
@@ -60,12 +61,16 @@ class Table extends PureComponent {
     this.setState({ withTree: !withTree });
   };
 
-  setTheme = (event) => {
+  setTheme = event => {
     this.setState({ theme: event.target.value });
   };
 
+  onColumnChange = columns => {
+    this.setState({ columns });
+  };
+
   render() {
-    const { withSelection, withTree, rowHeight, theme } = this.state;
+    const { withSelection, withTree, rowHeight, theme, columns } = this.state;
     return (
       <div>
         <div
@@ -104,7 +109,7 @@ class Table extends PureComponent {
           </FormControl>
           <FormControl style={{ width: "250px" }}>
             <FormLabel>Theme</FormLabel>
-            <FormGroup >
+            <FormGroup>
               <ThemeSelector
                 value={theme}
                 options={themes}
@@ -120,7 +125,10 @@ class Table extends PureComponent {
           withSelection={withSelection}
           withTree={withTree}
           rowHeight={60 + (rowHeight - 3) * 6}
-          theme={themes.find(currentTheme => theme === currentTheme.label).value}
+          theme={
+            themes.find(currentTheme => theme === currentTheme.label).value
+          }
+          onColumnChange={this.onColumnChange}
         />
       </div>
     );

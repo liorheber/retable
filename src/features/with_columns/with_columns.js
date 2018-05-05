@@ -4,6 +4,10 @@ const Context = React.createContext();
 
 const withColumns = WrappedComponent =>
   class extends PureComponent {
+    static defaultProps = {
+      onColumnChange: () => {}
+    };
+
     constructor(props, context) {
       super(props, context);
       this.updateColumns = this.updateColumns.bind(this);
@@ -22,14 +26,13 @@ const withColumns = WrappedComponent =>
     }
 
     updateColumns(columns) {
-      this.setState({ columns });
+      const { onColumnChange } = this.props;
+      this.setState({ columns }, () => onColumnChange(columns));
     }
 
     render() {
       const { columns } = this.state;
-      const staticColumns = columns.filter(
-        col => col.defaultInColumnSelection
-      );
+      const staticColumns = columns.filter(col => col.defaultInColumnSelection);
       const dynamicColumns = columns.filter(
         col => !col.defaultInColumnSelection
       );
