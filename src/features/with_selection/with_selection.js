@@ -7,6 +7,7 @@ const withSelection = WrappedComponent =>
     constructor(props, context) {
       super(props, context);
       this.state = {
+        withSelection: props.selection,
         selection: [],
         handleSelection: this.handleSelection.bind(this),
         onSelectRow: index => {
@@ -18,10 +19,23 @@ const withSelection = WrappedComponent =>
           const { rows } = this.props;
           const { selection } = this.state;
           const isAllSelected = selection.length === rows.length;
-          const newSelection = isAllSelected ? [] : rows.map((item, index) => index);
+          const newSelection = isAllSelected
+            ? []
+            : rows.map((item, index) => index);
           this.setState({ selection: newSelection });
         }
       };
+    }
+
+    static getDerivedStateFromProps(nextProps, prevState) {
+      if (prevState.withSelection !== nextProps.withSelection) {
+        return {
+          withSelection: nextProps.withSelection,
+          selection: nextProps.withSelection ? prevState.selection : []
+        };
+      } else {
+        return null;
+      }
     }
 
     handleSelection(index, isSelected, event) {
@@ -37,6 +51,8 @@ const withSelection = WrappedComponent =>
     }
 
     removeSelections(index, isSelected) {
+      const { withSelection } = this.state;
+      if (!withSelection) return;
       this.setState({ selection: [] }, () =>
         this.handleSelection(index, isSelected)
       );
@@ -47,7 +63,7 @@ const withSelection = WrappedComponent =>
       const { selection } = this.state;
       const isAllSelected = selection.length === rows.length;
       return (
-        <Context.Provider value={{...this.state, isAllSelected}}>
+        <Context.Provider value={{ ...this.state, isAllSelected }}>
           <WrappedComponent {...this.props} />
         </Context.Provider>
       );

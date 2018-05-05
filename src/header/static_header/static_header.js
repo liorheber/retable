@@ -13,8 +13,8 @@ const Static = styled.div`
   position: relative;
   z-index: 2;
   background: ${props => props.theme.background};
-  min-width: ${props => props.width + 80}px;
-  max-width: ${props => props.width + 80}px;
+  min-width: ${props => props.width + props.widthOffset}px;
+  max-width: ${props => props.width + props.widthOffset}px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22,32 +22,30 @@ const Static = styled.div`
 
 class StaticHeader extends PureComponent {
   render() {
-    const {
-      columns,
-      width
-    } = this.props;
+    const { columns, width } = this.props;
     return (
-      <Static width={width}>
-        <div style={{ padding: "0 10px" }}>
-          <ExpandCollapse />
-          <SelectionConsumer>
-            {({ onSelectAll, selection, isAllSelected }) => (
-              <Checkbox
-                checked={isAllSelected}
-                indeterminate={!isAllSelected && selection.length > 0}
-                onClick={onSelectAll}
-              />
-            )}
-          </SelectionConsumer>
-        </div>
-        {columns.map((col, index) => (
-          <HeaderCell
-            key={index}
-            value={col.name}
-            {...col}
-          />
-        ))}
-      </Static>
+      <SelectionConsumer>
+        {({ onSelectAll, selection, isAllSelected, withSelection }) => {
+          const widthOffset = 40 + (withSelection ? 40 : 10);
+          return (
+            <Static width={width} widthOffset={widthOffset}>
+              <div style={{ padding: "0 10px" }}>
+                <ExpandCollapse />
+                {withSelection && (
+                  <Checkbox
+                    checked={isAllSelected}
+                    indeterminate={!isAllSelected && selection.length > 0}
+                    onClick={onSelectAll}
+                  />
+                )}
+              </div>
+              {columns.map((col, index) => (
+                <HeaderCell key={index} value={col.name} {...col} />
+              ))}
+            </Static>
+          );
+        }}
+      </SelectionConsumer>
     );
   }
 }

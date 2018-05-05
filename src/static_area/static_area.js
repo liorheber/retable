@@ -13,8 +13,8 @@ const Static = styled.div`
   position: relative;
   z-index: 2;
   background: ${props => props.theme.background};
-  min-width: ${props => props.width + 80}px;
-  max-width: ${props => props.width + 80}px;
+  min-width: ${props => props.width + props.widthOffset}px;
+  max-width: ${props => props.width + props.widthOffset}px;
   display: flex;
   flex-direction: column;
 `;
@@ -24,35 +24,39 @@ class StaticArea extends PureComponent {
     const { rows, columns, width, rowHeight } = this.props;
     return (
       <SelectionConsumer>
-        {({ handleSelection, selection }) => (
-          <Static width={width}>
-            {rows.map((row, index) => (
-              <Row
-                rowHeight={rowHeight}
-                key={index}
-                index={index}
-                width={width + 80}
-              >
-                <RowActions
+        {({ handleSelection, selection, withSelection }) => {
+          const widthOffset = 40 + (withSelection ? 40 : 10);
+          return (
+            <Static width={width} widthOffset={widthOffset}>
+              {rows.map((row, index) => (
+                <Row
+                  rowHeight={rowHeight}
+                  key={index}
                   index={index}
-                  onClick={handleSelection}
-                  selection={selection}
-                />
-                {columns.map((col, index) => (
-                  <Cell
-                    width={col.width}
-                    key={index}
-                    className={`col-${col.id}`}
-                    type={col.type}
-                    value={row[col.id]}
-                    col={col}
+                  width={width + widthOffset}
+                >
+                  <RowActions
+                    index={index}
+                    onClick={handleSelection}
+                    selection={selection}
+                    withSelection={withSelection}
                   />
-                ))}
-              </Row>
-            ))}
-            <Row rowHeight={30} index={-1} />
-          </Static>
-        )}
+                  {columns.map((col, index) => (
+                    <Cell
+                      width={col.width}
+                      key={index}
+                      className={`col-${col.id}`}
+                      type={col.type}
+                      value={row[col.id]}
+                      col={col}
+                    />
+                  ))}
+                </Row>
+              ))}
+              <Row rowHeight={30} index={-1} />
+            </Static>
+          );
+        }}
       </SelectionConsumer>
     );
   }
