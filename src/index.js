@@ -7,6 +7,7 @@ import Grid from "./grid/grid";
 import withResize from "./features/with_resize/with_resize";
 import withSelection from "./features/with_selection/with_selection";
 import Body from "./body/body";
+import Loader from "./components/loader/loader";
 import withSort from "./features/with_sort/with_sort";
 import withFilter from "./features/with_filter/with_filter";
 import withColumns from "./features/with_columns/with_columns";
@@ -41,7 +42,8 @@ class ReTable extends PureComponent {
       totals,
       theme,
       staticColumns,
-      dynamicColumns
+      dynamicColumns,
+      isLoading
     } = this.props;
 
     const dynamicWidth = dynamicColumns.reduce(
@@ -61,6 +63,7 @@ class ReTable extends PureComponent {
               dynamicColumns={dynamicColumns}
               width={staticWidth}
             />
+            {isLoading && <Loader />}
             <Body
               rows={rows}
               staticColumns={staticColumns}
@@ -68,6 +71,7 @@ class ReTable extends PureComponent {
               dynamicColumns={dynamicColumns}
               dynamicWidth={dynamicWidth}
               rowHeight={rowHeight}
+              isLoading={isLoading}
             />
             <Footer
               dynamicColumns={dynamicColumns}

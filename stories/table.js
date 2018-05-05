@@ -37,13 +37,19 @@ class Table extends PureComponent {
       withTree: true,
       rowHeight: 3,
       theme: "Default",
-      columns: columns
+      columns: columns,
+      isLoading: false
     };
   }
 
   toggleWithSelection = () => {
     const { withSelection } = this.state;
     this.setState({ withSelection: !withSelection });
+  };
+
+  toggleIsLoading = () => {
+    const { isLoading } = this.state;
+    this.setState({ isLoading: !isLoading });
   };
 
   decreaseRowHeight = () => {
@@ -70,7 +76,7 @@ class Table extends PureComponent {
   };
 
   render() {
-    const { withSelection, withTree, rowHeight, theme, columns } = this.state;
+    const { withSelection, withTree, rowHeight, theme, columns, isLoading } = this.state;
     return (
       <div>
         <div
@@ -93,6 +99,11 @@ class Table extends PureComponent {
                 onChange={this.toggleWithTree}
                 checked={withTree}
                 label="withTree"
+              />
+              <Switch
+                onChange={this.toggleIsLoading}
+                checked={isLoading}
+                label="isLoading"
               />
             </FormGroup>
           </FormControl>
@@ -129,6 +140,7 @@ class Table extends PureComponent {
             themes.find(currentTheme => theme === currentTheme.label).value
           }
           onColumnChange={this.onColumnChange}
+          isLoading={isLoading}
         />
       </div>
     );

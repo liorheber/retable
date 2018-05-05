@@ -5,6 +5,8 @@ import DynamicArea from "../dynamic_area/dynamic_area";
 
 const BodySyle = styled.div`
   display: flex;
+  position: relative;
+  top: ${props => props.isLoading ? "-5px" : "0"}
 `;
 
 class Body extends PureComponent {
@@ -15,11 +17,12 @@ class Body extends PureComponent {
       staticWidth,
       dynamicColumns,
       dynamicWidth,
-      rowHeight
+      rowHeight,
+      isLoading
     } = this.props;
 
     return (
-      <BodySyle>
+      <BodySyle isLoading={isLoading}>
         <StaticArea
           rows={rows}
           columns={staticColumns}
