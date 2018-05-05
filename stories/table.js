@@ -36,7 +36,6 @@ class Table extends PureComponent {
 
   increaseRowHeight = () => {
     const { rowHeight } = this.state;
-    console.log("increase");
     this.setState({ rowHeight: rowHeight + 1 });
   };
 
