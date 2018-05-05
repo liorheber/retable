@@ -3,6 +3,7 @@ import ReTable from "../src/index";
 
 import Switch from "./components/switch";
 import NumberSelector from "./components/number_selector";
+import ThemeSelector from "./components/theme_selector";
 import {
   FormGroup,
   FormControlLabel,
@@ -10,9 +11,23 @@ import {
   FormLabel
 } from "material-ui/Form";
 
+import defaultTheme from "../src/themes/default";
+import dark from "../src/themes/dark";
+
 import columns from "./columns";
 import rows from "./rows";
 import totals from "./totals";
+
+const themes = [
+  {
+    value: defaultTheme,
+    label: "Default"
+  },
+  {
+    value: dark,
+    label: "Dark"
+  }
+];
 
 class Table extends PureComponent {
   constructor(props) {
@@ -20,7 +35,8 @@ class Table extends PureComponent {
     this.state = {
       withSelection: true,
       withTree: true,
-      rowHeight: 3
+      rowHeight: 3,
+      theme: "Default"
     };
   }
 
@@ -44,8 +60,12 @@ class Table extends PureComponent {
     this.setState({ withTree: !withTree });
   };
 
+  setTheme = (event) => {
+    this.setState({ theme: event.target.value });
+  };
+
   render() {
-    const { withSelection, withTree, rowHeight } = this.state;
+    const { withSelection, withTree, rowHeight, theme } = this.state;
     return (
       <div>
         <div
@@ -56,7 +76,7 @@ class Table extends PureComponent {
             boxShadow: "0px -14px 30px -25px #000000a3 inset"
           }}
         >
-          <FormControl style={{width: "250px"}}>
+          <FormControl style={{ width: "200px" }}>
             <FormLabel>Boolean Props</FormLabel>
             <FormGroup>
               <Switch
@@ -71,7 +91,7 @@ class Table extends PureComponent {
               />
             </FormGroup>
           </FormControl>
-          <FormControl style={{width: "250px"}}>
+          <FormControl style={{ width: "250px", marginRight: "40px" }}>
             <FormLabel>Number Props</FormLabel>
             <FormGroup>
               <NumberSelector
@@ -79,6 +99,16 @@ class Table extends PureComponent {
                 increase={this.increaseRowHeight}
                 label="rowHeight"
                 size={rowHeight}
+              />
+            </FormGroup>
+          </FormControl>
+          <FormControl style={{ width: "250px" }}>
+            <FormLabel>Theme</FormLabel>
+            <FormGroup >
+              <ThemeSelector
+                value={theme}
+                options={themes}
+                onChange={this.setTheme}
               />
             </FormGroup>
           </FormControl>
@@ -90,6 +120,7 @@ class Table extends PureComponent {
           withSelection={withSelection}
           withTree={withTree}
           rowHeight={60 + (rowHeight - 3) * 6}
+          theme={themes.find(currentTheme => theme === currentTheme.label).value}
         />
       </div>
     );
