@@ -1,11 +1,24 @@
 import React, { PureComponent } from "react";
 import ReTable from "../src/index";
 
-import Button from "material-ui/Button";
+import Switch from "material-ui/Switch";
+import {
+  FormGroup,
+  FormControlLabel,
+  FormControl,
+  FormLabel
+} from "material-ui/Form";
 
 import columns from "./columns";
 import rows from "./rows";
 import totals from "./totals";
+
+const SwitchComponent = ({ onChange, checked, label }) => (
+  <FormControlLabel
+    control={<Switch checked={checked} onChange={onChange} color="primary"/>}
+    label={label}
+  />
+);
 
 class Table extends PureComponent {
   constructor(props) {
@@ -34,21 +47,25 @@ class Table extends PureComponent {
           style={{
             width: "100%",
             height: "260px",
-            background: "#6d6d6d"
+            background: "#e4e4e4",
+            padding: "14px",
           }}
         >
-          <div
-            style={{
-              background: "#e4e4e4"
-            }}
-          >
-            <Button
-              onClick={this.toggleWithSelection}
-            >{`withSelection: ${withSelection}`}</Button>
-            <Button
-              onClick={this.toggleWithTree}
-            >{`withTree: ${withTree}`}</Button>
-          </div>
+          <FormControl>
+            <FormLabel>Boolean Props</FormLabel>
+            <FormGroup>
+              <SwitchComponent
+                onChange={this.toggleWithSelection}
+                checked={withSelection}
+                label="withSelection"
+              />
+              <SwitchComponent
+                onChange={this.toggleWithTree}
+                checked={withTree}
+                label="withTree"
+              />
+            </FormGroup>
+          </FormControl>
         </div>
         <ReTable
           columns={columns}
