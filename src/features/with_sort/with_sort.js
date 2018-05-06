@@ -4,20 +4,38 @@ const Context = React.createContext();
 
 const withSort = WrappedComponent =>
   class extends PureComponent {
+
+    static defaultProps = {
+      sort: [{id: undefined, direction: undefined}],
+      onSortChange: () => {}
+    };
+
     constructor(props, context) {
       super(props, context);
       this.state = {
-        sort: [{id: undefined, direction: undefined}],
         setSort: this.setSort.bind(this)
       };
     }
 
-    setSort({ id, direction }) {
-      if (direction === "asc" || direction === undefined) {
-        this.setState({ sort: [{ id, direction: "desc" }] });
-      } else {
-        this.setState({ sort: [{ id, direction: "asc" }] });
+    static getDerivedStateFromProps(nextProps, prevState) {
+      if (!prevState || prevState.sort !== nextProps.sort) {
+        return {
+          sort: nextProps.sort
+        };
       }
+      return null;
+    }
+
+    setSort({ id, direction }) {
+      const sort = [];
+      const {onSortChange} = this.props;
+      if (direction === "asc" || direction === undefined) {
+        sort.push({ id, direction: "desc" });
+      } else {
+        sort.push({ id, direction: "asc" });
+      }
+      this.setState({ sort });
+      onSortChange(sort);
     }
 
     render() {

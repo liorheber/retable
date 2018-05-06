@@ -38,7 +38,8 @@ class Table extends PureComponent {
       rowHeight: 3,
       theme: "Default",
       columns: columns,
-      isLoading: false
+      isLoading: false,
+      sort: [{id: "S6", direction: "asc"}]
     };
   }
 
@@ -75,8 +76,12 @@ class Table extends PureComponent {
     this.setState({ columns });
   };
 
+  onSortChange = sort => {
+    this.setState({ sort });
+  };
+
   render() {
-    const { withSelection, withTree, rowHeight, theme, columns, isLoading } = this.state;
+    const { withSelection, withTree, rowHeight, theme, columns, isLoading, sort } = this.state;
     return (
       <div>
         <div
@@ -132,6 +137,7 @@ class Table extends PureComponent {
         <ReTable
           columns={columns}
           rows={rows}
+          sort={sort}
           totals={totals}
           withSelection={withSelection}
           withTree={withTree}
@@ -140,6 +146,7 @@ class Table extends PureComponent {
             themes.find(currentTheme => theme === currentTheme.label).value
           }
           onColumnChange={this.onColumnChange}
+          onSortChange={this.onSortChange}
           isLoading={isLoading}
         />
       </div>
