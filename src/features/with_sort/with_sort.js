@@ -4,9 +4,8 @@ const Context = React.createContext();
 
 const withSort = WrappedComponent =>
   class extends PureComponent {
-
     static defaultProps = {
-      sort: [{id: undefined, direction: undefined}],
+      sort: [{ id: undefined, direction: undefined }],
       onSortChange: () => {}
     };
 
@@ -18,7 +17,10 @@ const withSort = WrappedComponent =>
     }
 
     static getDerivedStateFromProps(nextProps, prevState) {
-      if (!prevState || prevState.sort !== nextProps.sort) {
+      if (
+        !prevState ||
+        JSON.stringify(prevState.sort) !== JSON.stringify(nextProps.sort)
+      ) {
         return {
           sort: nextProps.sort
         };
@@ -28,7 +30,7 @@ const withSort = WrappedComponent =>
 
     setSort({ id, direction }) {
       const sort = [];
-      const {onSortChange} = this.props;
+      const { onSortChange } = this.props;
       if (direction === "asc" || direction === undefined) {
         sort.push({ id, direction: "desc" });
       } else {

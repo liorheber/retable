@@ -28,7 +28,10 @@ const withSelection = WrappedComponent =>
     }
 
     static getDerivedStateFromProps(nextProps, prevState) {
-      if (prevState.withSelection !== nextProps.withSelection) {
+      if (
+        JSON.stringify(prevState.withSelection) !==
+        JSON.stringify(nextProps.withSelection)
+      ) {
         return {
           withSelection: nextProps.withSelection,
           selection: nextProps.withSelection ? prevState.selection : []

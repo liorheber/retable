@@ -12,18 +12,9 @@ const withRenderers = WrappedComponent =>
     constructor(props, context) {
       super(props, context);
       this.state = {
-        renderers: renderers,
+        renderers: { ...renderers, ...props.renderers },
         getRenderer: this.getRenderer.bind(this)
       };
-    }
-
-    static getDerivedStateFromProps(nextProps, prevState) {
-      if (!prevState || prevState.renderers !== nextProps.renderers) {
-        return {
-          renderers: { ...renderers, ...nextProps.renderers }
-        };
-      }
-      return null;
     }
 
     getRenderer(type) {

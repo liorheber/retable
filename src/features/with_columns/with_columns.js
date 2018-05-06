@@ -17,7 +17,10 @@ const withColumns = WrappedComponent =>
     }
 
     static getDerivedStateFromProps(nextProps, prevState) {
-      if (!prevState || prevState.columns !== nextProps.columns) {
+      if (
+        !prevState ||
+        JSON.stringify(prevState.columns) !== JSON.stringify(nextProps.columns)
+      ) {
         return {
           columns: nextProps.columns
         };
@@ -27,7 +30,7 @@ const withColumns = WrappedComponent =>
 
     updateColumns(columns) {
       const { onColumnChange } = this.props;
-      this.setState({ columns }, () => onColumnChange(columns));
+      onColumnChange ? onColumnChange(columns) : this.setState({ columns });
     }
 
     render() {
