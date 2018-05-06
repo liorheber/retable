@@ -8,8 +8,8 @@ const rows = [
     S4: "SOME-ASIN-3434",
     S5: "France",
     S6: {
-      tooltip: "Google [414]",
-      icon: "Google"
+      tooltip: "Pet",
+      icon: "PET"
     },
     S7: "Nike",
     S8: "SOME-UPC123",
@@ -40,8 +40,8 @@ const rows = [
         S4: "00",
         S5: "France",
         S6: {
-          tooltip: "Google [414]",
-          icon: "Google"
+          tooltip: "Pet",
+          icon: "PET"
         },
         S7: "Nike",
         S8: "SOME-UPC123",
@@ -73,8 +73,8 @@ const rows = [
             S4: "987987987",
             S5: "France",
             S6: {
-              tooltip: "Google [414]",
-              icon: "Google"
+              tooltip: "Pet",
+              icon: "PET"
             },
             S7: "Nike",
             S8: "SOME-UPC123",
@@ -106,8 +106,8 @@ const rows = [
                 S4: "987987987",
                 S5: "France",
                 S6: {
-                  tooltip: "Google [414]",
-                  icon: "Google"
+                  tooltip: "Pet",
+                  icon: "PET"
                 },
                 S7: "Nike",
                 S8: "SOME-UPC123",
@@ -139,8 +139,8 @@ const rows = [
                 S4: "987987987",
                 S5: "France",
                 S6: {
-                  tooltip: "Google [414]",
-                  icon: "Google"
+                  tooltip: "Pet",
+                  icon: "PET"
                 },
                 S7: "Nike",
                 S8: "SOME-UPC123",
@@ -174,8 +174,8 @@ const rows = [
             S4: "001",
             S5: "France",
             S6: {
-              tooltip: "Google [414]",
-              icon: "Google"
+              tooltip: "Pet",
+              icon: "PET"
             },
             S7: "Nike",
             S8: "SOME-UPC123",
@@ -207,8 +207,8 @@ const rows = [
                 S4: "987987987",
                 S5: "France",
                 S6: {
-                  tooltip: "Google [414]",
-                  icon: "Google"
+                  tooltip: "Pet",
+                  icon: "PET"
                 },
                 S7: "Nike",
                 S8: "SOME-UPC123",
@@ -240,8 +240,8 @@ const rows = [
                 S4: "987987987",
                 S5: "France",
                 S6: {
-                  tooltip: "Google [414]",
-                  icon: "Google"
+                  tooltip: "Pet",
+                  icon: "PET"
                 },
                 S7: "Nike",
                 S8: "SOME-UPC123",
@@ -276,8 +276,8 @@ const rows = [
         S4: "01",
         S5: "France",
         S6: {
-          tooltip: "Google [414]",
-          icon: "Google"
+          tooltip: "Pet",
+          icon: "PET"
         },
         S7: "Nike",
         S8: "SOME-UPC123",
@@ -309,8 +309,8 @@ const rows = [
             S4: "987987987",
             S5: "France",
             S6: {
-              tooltip: "Google [414]",
-              icon: "Google"
+              tooltip: "Pet",
+              icon: "PET"
             },
             S7: "Nike",
             S8: "SOME-UPC123",
@@ -342,8 +342,8 @@ const rows = [
                 S4: "987987987",
                 S5: "France",
                 S6: {
-                  tooltip: "Google [414]",
-                  icon: "Google"
+                  tooltip: "Pet",
+                  icon: "PET"
                 },
                 S7: "Nike",
                 S8: "SOME-UPC123",
@@ -375,8 +375,8 @@ const rows = [
                 S4: "987987987",
                 S5: "France",
                 S6: {
-                  tooltip: "Google [414]",
-                  icon: "Google"
+                  tooltip: "Pet",
+                  icon: "PET"
                 },
                 S7: "Nike",
                 S8: "SOME-UPC123",
@@ -410,8 +410,8 @@ const rows = [
             S4: "001",
             S5: "France",
             S6: {
-              tooltip: "Google [414]",
-              icon: "Google"
+              tooltip: "Pet",
+              icon: "PET"
             },
             S7: "Nike",
             S8: "SOME-UPC123",
@@ -443,8 +443,8 @@ const rows = [
                 S4: "987987987",
                 S5: "France",
                 S6: {
-                  tooltip: "Google [414]",
-                  icon: "Google"
+                  tooltip: "Pet",
+                  icon: "PET"
                 },
                 S7: "Nike",
                 S8: "SOME-UPC123",
@@ -476,8 +476,8 @@ const rows = [
                 S4: "987987987",
                 S5: "France",
                 S6: {
-                  tooltip: "Google [414]",
-                  icon: "Google"
+                  tooltip: "Pet",
+                  icon: "PET"
                 },
                 S7: "Nike",
                 S8: "SOME-UPC123",
@@ -512,8 +512,8 @@ const rows = [
         S4: "02",
         S5: "France",
         S6: {
-          tooltip: "Google [414]",
-          icon: "Google"
+          tooltip: "Pet",
+          icon: "PET"
         },
         S7: "Nike",
         S8: "SOME-UPC123",
@@ -545,8 +545,8 @@ const rows = [
             S4: "987987987",
             S5: "France",
             S6: {
-              tooltip: "Google [414]",
-              icon: "Google"
+              tooltip: "Pet",
+              icon: "PET"
             },
             S7: "Nike",
             S8: "SOME-UPC123",
@@ -578,8 +578,8 @@ const rows = [
                 S4: "987987987",
                 S5: "France",
                 S6: {
-                  tooltip: "Google [414]",
-                  icon: "Google"
+                  tooltip: "Pet",
+                  icon: "PET"
                 },
                 S7: "Nike",
                 S8: "SOME-UPC123",
@@ -611,8 +611,8 @@ const rows = [
                 S4: "987987987",
                 S5: "France",
                 S6: {
-                  tooltip: "Google [414]",
-                  icon: "Google"
+                  tooltip: "Pet",
+                  icon: "PET"
                 },
                 S7: "Nike",
                 S8: "SOME-UPC123",
@@ -646,8 +646,8 @@ const rows = [
             S4: "001",
             S5: "France",
             S6: {
-              tooltip: "Google [414]",
-              icon: "Google"
+              tooltip: "Pet",
+              icon: "PET"
             },
             S7: "Nike",
             S8: "SOME-UPC123",
@@ -679,8 +679,8 @@ const rows = [
                 S4: "987987987",
                 S5: "France",
                 S6: {
-                  tooltip: "Google [414]",
-                  icon: "Google"
+                  tooltip: "Pet",
+                  icon: "PET"
                 },
                 S7: "Nike",
                 S8: "SOME-UPC123",
@@ -712,8 +712,8 @@ const rows = [
                 S4: "987987987",
                 S5: "France",
                 S6: {
-                  tooltip: "Google [414]",
-                  icon: "Google"
+                  tooltip: "Pet",
+                  icon: "PET"
                 },
                 S7: "Nike",
                 S8: "SOME-UPC123",
@@ -749,8 +749,8 @@ const rows = [
     S4: "SOME-ASIN-456",
     S5: "United States",
     S6: {
-      tooltip: "Amazon [114]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Nike",
     S8: "SOME-UPC11",
@@ -781,8 +781,8 @@ const rows = [
     S4: "SOME-ASIN-111",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [414]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "SOME-UPC11",
@@ -813,8 +813,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -845,8 +845,8 @@ const rows = [
     S4: "SOME-ASIN-3434",
     S5: "France",
     S6: {
-      tooltip: "Google [414]",
-      icon: "Google"
+      tooltip: "Pet",
+      icon: "PET"
     },
     S7: "Nike",
     S8: "SOME-UPC123",
@@ -876,8 +876,8 @@ const rows = [
     S4: "SOME-ASIN-456",
     S5: "United States",
     S6: {
-      tooltip: "Amazon [114]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Nike",
     S8: "SOME-UPC11",
@@ -908,8 +908,8 @@ const rows = [
     S4: "SOME-ASIN-111",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [414]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "SOME-UPC11",
@@ -940,8 +940,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -972,8 +972,8 @@ const rows = [
     S4: "SOME-ASIN-3434",
     S5: "France",
     S6: {
-      tooltip: "Google [414]",
-      icon: "Google"
+      tooltip: "Pet",
+      icon: "PET"
     },
     S7: "Nike",
     S8: "SOME-UPC123",
@@ -1003,8 +1003,8 @@ const rows = [
     S4: "SOME-ASIN-456",
     S5: "United States",
     S6: {
-      tooltip: "Amazon [114]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Nike",
     S8: "SOME-UPC11",
@@ -1035,8 +1035,8 @@ const rows = [
     S4: "SOME-ASIN-111",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [414]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "SOME-UPC11",
@@ -1067,8 +1067,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1099,8 +1099,8 @@ const rows = [
     S4: "SOME-ASIN-3434",
     S5: "France",
     S6: {
-      tooltip: "Google [414]",
-      icon: "Google"
+      tooltip: "Pet",
+      icon: "PET"
     },
     S7: "Nike",
     S8: "SOME-UPC123",
@@ -1130,8 +1130,8 @@ const rows = [
     S4: "SOME-ASIN-456",
     S5: "United States",
     S6: {
-      tooltip: "Amazon [114]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Nike",
     S8: "SOME-UPC11",
@@ -1162,8 +1162,8 @@ const rows = [
     S4: "SOME-ASIN-111",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [414]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "SOME-UPC11",
@@ -1194,8 +1194,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1226,8 +1226,8 @@ const rows = [
     S4: "SOME-ASIN-3434",
     S5: "France",
     S6: {
-      tooltip: "Google [414]",
-      icon: "Google"
+      tooltip: "Pet",
+      icon: "PET"
     },
     S7: "Nike",
     S8: "SOME-UPC123",
@@ -1257,8 +1257,8 @@ const rows = [
     S4: "SOME-ASIN-456",
     S5: "United States",
     S6: {
-      tooltip: "Amazon [114]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Nike",
     S8: "SOME-UPC11",
@@ -1289,8 +1289,8 @@ const rows = [
     S4: "SOME-ASIN-111",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [414]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "SOME-UPC11",
@@ -1321,8 +1321,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1353,8 +1353,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1385,8 +1385,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1417,8 +1417,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1449,8 +1449,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1481,8 +1481,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1513,8 +1513,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1545,8 +1545,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1577,8 +1577,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1609,8 +1609,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1641,8 +1641,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1673,8 +1673,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1705,8 +1705,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1737,8 +1737,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1769,8 +1769,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1801,8 +1801,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1833,8 +1833,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1865,8 +1865,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1897,8 +1897,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1929,8 +1929,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1961,8 +1961,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -1993,8 +1993,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2025,8 +2025,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2057,8 +2057,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2089,8 +2089,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2121,8 +2121,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2153,8 +2153,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2185,8 +2185,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2217,8 +2217,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2249,8 +2249,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2281,8 +2281,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2313,8 +2313,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2345,8 +2345,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2377,8 +2377,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2409,8 +2409,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2441,8 +2441,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2473,8 +2473,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2505,8 +2505,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2537,8 +2537,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2569,8 +2569,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2601,8 +2601,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2633,8 +2633,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2665,8 +2665,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2697,8 +2697,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2729,8 +2729,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2761,8 +2761,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2793,8 +2793,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2825,8 +2825,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2857,8 +2857,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2889,8 +2889,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2921,8 +2921,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2953,8 +2953,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -2985,8 +2985,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3017,8 +3017,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3049,8 +3049,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3081,8 +3081,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3113,8 +3113,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3145,8 +3145,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3177,8 +3177,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3209,8 +3209,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3241,8 +3241,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3273,8 +3273,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3305,8 +3305,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3337,8 +3337,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3369,8 +3369,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3401,8 +3401,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3433,8 +3433,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3465,8 +3465,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3497,8 +3497,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3529,8 +3529,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3561,8 +3561,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3593,8 +3593,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3625,8 +3625,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3657,8 +3657,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3689,8 +3689,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3721,8 +3721,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3753,8 +3753,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3785,8 +3785,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3817,8 +3817,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3849,8 +3849,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3881,8 +3881,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3913,8 +3913,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3945,8 +3945,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -3977,8 +3977,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -4009,8 +4009,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -4041,8 +4041,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -4073,8 +4073,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -4105,8 +4105,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -4137,8 +4137,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -4169,8 +4169,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -4201,8 +4201,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -4233,8 +4233,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -4265,8 +4265,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -4297,8 +4297,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -4329,8 +4329,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",
@@ -4361,8 +4361,8 @@ const rows = [
     S4: "S2F3434DDD",
     S5: "Germany",
     S6: {
-      tooltip: "Amazon [314]",
-      icon: "Amazon"
+      tooltip: "Human",
+      icon: "HUMAN"
     },
     S7: "Adidas",
     S8: "ASDDFD234",

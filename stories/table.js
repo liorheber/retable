@@ -17,6 +17,7 @@ import dark from "../src/themes/dark";
 import columns from "./columns";
 import rows from "./rows";
 import totals from "./totals";
+import IconRenderer from "./components/channel_renderer";
 
 const themes = [
   {
@@ -39,7 +40,7 @@ class Table extends PureComponent {
       theme: "Default",
       columns: columns,
       isLoading: false,
-      sort: [{id: "S6", direction: "asc"}]
+      sort: [{ id: "S6", direction: "asc" }]
     };
   }
 
@@ -81,7 +82,15 @@ class Table extends PureComponent {
   };
 
   render() {
-    const { withSelection, withTree, rowHeight, theme, columns, isLoading, sort } = this.state;
+    const {
+      withSelection,
+      withTree,
+      rowHeight,
+      theme,
+      columns,
+      isLoading,
+      sort
+    } = this.state;
     return (
       <div>
         <div
@@ -148,6 +157,7 @@ class Table extends PureComponent {
           onColumnChange={this.onColumnChange}
           onSortChange={this.onSortChange}
           isLoading={isLoading}
+          renderers={{ ICON: IconRenderer }}
         />
       </div>
     );

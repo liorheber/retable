@@ -23,9 +23,9 @@ const columns = [
   },
   {
     id: "S6",
-    name: "channel",
-    filename: "channel",
-    type: "CHANNEL",
+    name: "type",
+    filename: "type",
+    type: "ICON",
     width: 190,
     enableQuickFilter: true,
     filterType: "MONETARY"

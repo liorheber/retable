@@ -1,12 +1,12 @@
 import React, { PureComponent, Fragment } from "react";
 import styled from "styled-components";
 
-import { SortConsumer } from "../../features/with_sort/with_sort";
-import { FilterConsumer } from "../../features/with_filter/with_filter";
+import { SortConsumer } from "../../../with_sort/with_sort";
+import { FilterConsumer } from "../../../with_filter/with_filter";
 
 import Renderer from "../renderer";
-import Filter from "../../components/filter/filter";
-import Sort from "../../components/sort/sort";
+import Filter from "../../../../components/filter/filter";
+import Sort from "../../../../components/sort/sort";
 
 const HeaderStyle = styled.div`
   text-transform: uppercase;

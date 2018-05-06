@@ -1,3 +1,4 @@
+import React, { PureComponent } from "react";
 import styled from "styled-components";
 
 const Renderer = styled.div`

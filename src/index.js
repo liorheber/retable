@@ -13,6 +13,7 @@ import withFilter from "./features/with_filter/with_filter";
 import withColumns from "./features/with_columns/with_columns";
 
 import defaultTheme from "./themes/default";
+import withRenderers from "./features/with_renderers/with_renderers";
 
 injectGlobal`
   @font-face {
@@ -30,10 +31,6 @@ class ReTable extends PureComponent {
     totals: [],
     theme: defaultTheme
   };
-
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     const {
@@ -87,5 +84,5 @@ class ReTable extends PureComponent {
 }
 
 export default withColumns(
-  withFilter(withSort(withSelection(withResize(ReTable))))
+  withRenderers(withFilter(withSort(withSelection(withResize(ReTable)))))
 );
