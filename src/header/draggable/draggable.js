@@ -41,7 +41,6 @@ class Resize extends PureComponent {
     event.preventDefault();
     const { lastX } = this.state;
     const { resizeEnd } = this.props;
-    resizeEnd();
     window.removeEventListener("mousemove", this.moveLine, true);
     const { id, commitResize, width } = this.props;
     const delta = draggableData.lastX - lastX;

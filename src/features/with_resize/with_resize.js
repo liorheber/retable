@@ -22,7 +22,7 @@ const withResize = WrappedComponent =>
       const newColumns = columns.map(
         col => (col.id === id ? { ...col, width } : col)
       );
-      updateColumns(newColumns);
+      this.setState({ resizing: false }, () => updateColumns(newColumns));
     }
 
     render() {
@@ -30,10 +30,7 @@ const withResize = WrappedComponent =>
       return (
         <Context.Provider value={this.state}>
           <WrappedComponent {...this.props} />
-          <Marker
-            ref={this.marker}
-            resizing={resizing}
-          />
+          <Marker ref={this.marker} resizing={resizing} />
         </Context.Provider>
       );
     }
