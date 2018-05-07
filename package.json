@@ -1,6 +1,6 @@
 {
   "name": "retable",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "main": "index.js",
   "repository": "https://github.com/liorheber/retable.git",
   "author": "liorheber <lior.heber@kenshoo.com>",
@@ -9,7 +9,9 @@
     "build": "webpack --config config/webpack/webpack.dev.js --mode development",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest --config config/jest/jest.config.json"
+    "test": "jest --config config/jest/jest.config.json",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
     "@storybook/addon-options": "^3.4.3",
@@ -30,7 +32,9 @@
     "regenerator-runtime": "^0.11.1",
     "webpack": "^4.5.0",
     "webpack-cli": "^2.0.14",
-    "webpack-merge": "^4.1.2"
+    "webpack-merge": "^4.1.2",
+    "travis-deploy-once": "^5.0.0",
+    "semantic-release": "^15.3.1"
   },
   "dependencies": {
     "@material-ui/icons": "^1.0.0-beta.43",
