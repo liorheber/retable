@@ -1,0 +1,15 @@
+{
+  "verbose": true,
+  "testResultsProcessor": "jest-junit",
+  "rootDir": "../../",
+  "moduleFileExtensions": [
+    "js",
+    "jsx"
+  ],
+  "moduleDirectories": [
+    "node_modules"
+  ],
+  "collectCoverageFrom" : [
+    "**/src/**/*.{js,jsx}"
+  ]
+}
