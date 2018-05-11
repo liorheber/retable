@@ -7,8 +7,8 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --config config/webpack/webpack.prod.js --mode production",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "storybook": "start-storybook -s ./static -p 6006",
+    "build-storybook": "build-storybook -s ./static",
     "test": "jest --config config/jest/jest.config.json",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"

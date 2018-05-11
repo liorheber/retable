@@ -6,6 +6,7 @@ import Renderer from "../renderer";
 const ImageStyle = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   border: 1px solid #e9ebf0;
   border-radius: 3px;
   max-width: 80px;

@@ -3,6 +3,8 @@ import TextRenderer from "./renderers/text/text";
 import Image from "./renderers/image/image";
 import DateRenderer from "./renderers/date/date";
 import Header from "./renderers/header/header";
+import {PercentageRenderer} from "./renderers/percentage/percentage";
+import ColorRenderer from "./renderers/color/color";
 
 export default {
   HEADER: Header,
@@ -10,5 +12,7 @@ export default {
   IMAGE: Image,
   DATE: DateRenderer,
   DATETIME: DateRenderer,
-  NUMBER: NumberRenderer
+  NUMBER: NumberRenderer,
+  PERCENTAGE: PercentageRenderer,
+  COLOR: ColorRenderer,
 }
