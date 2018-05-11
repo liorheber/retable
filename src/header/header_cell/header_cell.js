@@ -13,10 +13,10 @@ const HeaderCellStyle = styled.div`
 
 class HeaderCell extends PureComponent {
   render() {
-    const { width, id, value, resizable, ...col } = this.props;
+    const { width, id, value, resizable, minWidth, ...col } = this.props;
     return (
       <ResizeConsumer>
-        {({ marker, resizeStart, resizeEnd, commitResize }) => (
+        {({ marker, resizeStart, resizeEnd, commitResize, defaultMinWidth }) => (
           <HeaderCellStyle>
             <Cell
               width={width}
@@ -35,6 +35,7 @@ class HeaderCell extends PureComponent {
                 marker={marker}
                 resizeStart={resizeStart}
                 resizeEnd={resizeEnd}
+                minWidth={minWidth || defaultMinWidth}
               />
             )}
           </HeaderCellStyle>

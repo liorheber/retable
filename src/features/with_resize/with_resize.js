@@ -11,6 +11,7 @@ const withResize = WrappedComponent =>
       this.state = {
         resizing: false,
         marker: this.marker,
+        defaultMinWidth: props.minWidth || 60,
         resizeStart: () => this.setState({ resizing: true }),
         resizeEnd: () => this.setState({ resizing: false }),
         commitResize: this.commitResize.bind(this)

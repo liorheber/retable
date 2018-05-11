@@ -4,6 +4,7 @@ const columns = [
     name: "Mug shot",
     type: "IMAGE",
     width: 130,
+    minWidth: 100,
     resizable: true,
     fixed: true,
   },
@@ -33,10 +34,11 @@ const columns = [
     name: "Description",
     type: "TEXT",
     width: 255,
+    minWidth: 200,
     editType: "TEXT",
     sortable: true,
     resizable: true,
-    filterable: true,
+    filterable: true
   },
   {
     id: "S5",
