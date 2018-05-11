@@ -4,9 +4,8 @@ const columns = [
     name: "Mug shot",
     type: "IMAGE",
     width: 130,
-    sortable: true,
     resizable: true,
-    defaultInColumnSelection: true,
+    fixed: true,
   },
   {
     id: "S2",
@@ -15,6 +14,8 @@ const columns = [
     type: "ICON",
     width: 145,
     filterable: true,
+    sortable: true,
+    fixed: true,
   },
   {
     id: "S3",
@@ -41,7 +42,6 @@ const columns = [
     id: "S5",
     name: "Country",
     type: "LOCATION",
-    sortable: true,
     resizable: true,
     width: 190,
     filterable: true
@@ -50,41 +50,49 @@ const columns = [
     id: "S11",
     name: "Sleep (%)",
     type: "PERCENTAGE",
-    width: 200
+    width: 200,
+    sortable: true
   },
   {
     id: "S6",
     name: "Family size",
     type: "NUMBER",
     width: 145,
+    filterable: true,
     sortable: true,
     resizable: true,
-    filterType: "NUMERIC",
-    comparable: true
   },
   {
     id: "S7",
     name: "Date of birth",
     type: "DATE",
-    width: 145
+    width: 145,
+    filterable: true,
+    sortable: true
   },
   {
     id: "S8",
     name: "Eye color",
     type: "COLOR",
-    width: 145
+    width: 145,
+    filterable: true,
+    sortable: true
   },
   {
     id: "S9",
     name: "Hair color",
     type: "COLOR",
-    width: 145
+    width: 145,
+    filterable: true,
+    sortable: true
   },
   {
     id: "S10",
     name: "Wealth of toys",
     type: "NUMBER",
-    width: 145
+    width: 145,
+    filterable: true,
+    sortable: true
   }
 ];
 

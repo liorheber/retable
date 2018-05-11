@@ -35,9 +35,9 @@ const withColumns = WrappedComponent =>
 
     render() {
       const { columns } = this.state;
-      const staticColumns = columns.filter(col => col.defaultInColumnSelection);
+      const staticColumns = columns.filter(col => col.fixed);
       const dynamicColumns = columns.filter(
-        col => !col.defaultInColumnSelection
+        col => !col.fixed
       );
       return (
         <Context.Provider value={this.state}>

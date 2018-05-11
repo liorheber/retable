@@ -18,13 +18,13 @@ const ImageStyle = styled.div`
 class Image extends PureComponent {
   render() {
     const { value } = this.props;
-    return (
+    return value ? (
       <Renderer>
         <ImageStyle>
           <img src={value} height={40} />
         </ImageStyle>
       </Renderer>
-    );
+    ) : null;
   }
 }
 

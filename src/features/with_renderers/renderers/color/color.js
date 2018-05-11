@@ -11,17 +11,17 @@ const Color = styled.div`
   max-width: 60px;
   min-width: 60px;
   height: 32px;
-  background: ${props => props.color}
+  background: ${props => props.color};
 `;
 
 export class ColorRenderer extends PureComponent {
   render() {
     const { value } = this.props;
-    return (
+    return value ? (
       <Renderer>
-          <Color color={value} title={value} />
+        <Color color={value} title={value} />
       </Renderer>
-    );
+    ) : null;
   }
 }
 

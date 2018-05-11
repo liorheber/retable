@@ -31,7 +31,7 @@ class Header extends PureComponent {
   }
 
   render() {
-    const { value, id } = this.props;
+    const { value, id, sortable, filterable } = this.props;
     const { hover } = this.state;
     return (
       <Renderer
@@ -40,23 +40,29 @@ class Header extends PureComponent {
       >
         <HeaderStyle>{value}</HeaderStyle>
         <div>
-          <SortConsumer>
-            {({ setSort, sort }) => {
-              const isActive = sort[0].id === id;
-              const direction = isActive ? sort[0].direction : undefined;
-              return (
-                <Sort
-                  hover={hover}
-                  onClick={() => setSort({ id, direction })}
-                  isActive={isActive}
-                  direction={direction}
-                />
-              );
-            }}
-          </SortConsumer>
-          <FilterConsumer>
-            {({ openFilter }) => <Filter hover={hover} onClick={openFilter} />}
-          </FilterConsumer>
+          {sortable && (
+            <SortConsumer>
+              {({ setSort, sort }) => {
+                const isActive = sort[0].id === id;
+                const direction = isActive ? sort[0].direction : undefined;
+                return (
+                  <Sort
+                    hover={hover}
+                    onClick={() => setSort({ id, direction })}
+                    isActive={isActive}
+                    direction={direction}
+                  />
+                );
+              }}
+            </SortConsumer>
+          )}
+          {filterable && (
+            <FilterConsumer>
+              {({ openFilter }) => (
+                <Filter hover={hover} onClick={openFilter} />
+              )}
+            </FilterConsumer>
+          )}
         </div>
       </Renderer>
     );
