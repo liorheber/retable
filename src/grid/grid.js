@@ -6,8 +6,6 @@ const Grid = styled.div`
   flex-direction: column;
   position: relative;
   height: 100%;
-  font-size: 14px;
-  font-family: RobotoRg, "Helvetica Neue", sans-serif;
   color: ${props => props.theme.fontColor};
   font-smooth: always;
   -webkit-font-smoothing: antialiased;

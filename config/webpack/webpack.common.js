@@ -12,7 +12,7 @@ module.exports = {
   output: {
     filename: "[name].js",
     path: path.resolve(process.cwd(), "dist"),
-    library: "@kenshooui/retable",
+    library: "@liorheber/retable",
     libraryTarget: "commonjs2"
   },
   module: {

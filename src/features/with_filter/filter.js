@@ -74,7 +74,6 @@ const Actions = styled.div`
 const styles = theme => ({
   paper: {
     fontSize: "14px",
-    fontFamily: "RobotoRg, 'Helvetica Neue', sans-serif"
   },
   close: {
     width: "30px",

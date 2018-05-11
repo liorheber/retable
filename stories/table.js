@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react";
+import { injectGlobal } from "styled-components";
 import ReTable from "../src/index";
 
 import Switch from "./components/switch";
@@ -29,6 +30,14 @@ const themes = [
     label: "Dark"
   }
 ];
+
+
+injectGlobal`
+  body {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+  }
+`;
 
 class Table extends PureComponent {
   constructor(props) {

@@ -1,6 +1,6 @@
 import React, { PureComponent, Fragment } from "react";
 import { ScrollSync, ScrollSyncPane } from "react-scroll-sync";
-import { injectGlobal, ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import Header from "./header/header";
 import Footer from "./footer/footer";
 import Grid from "./grid/grid";
@@ -15,14 +15,6 @@ import withColumns from "./features/with_columns/with_columns";
 import defaultTheme from "./themes/default";
 import withRenderers from "./features/with_renderers/with_renderers";
 
-injectGlobal`
-  @font-face {
-    font-family:  'RobotoRg';
-    src:          url('https://cdn.kenshoo.com/resources/fonts/roboto/Roboto-Regular.ttf') format('truetype');
-    font-weight:  normal;
-    font-style:   normal;
-}
-`;
 
 class ReTable extends PureComponent {
   static defaultProps = {
