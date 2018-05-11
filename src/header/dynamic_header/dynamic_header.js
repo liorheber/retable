@@ -24,12 +24,8 @@ class DynamicHeader extends PureComponent {
     return (
       <ScrollSyncPane>
         <Dynamic>
-          {columns.map((col, index) => (
-            <HeaderCell
-              key={index}
-              value={col.name}
-              {...col}
-            />
+          {columns.map(col => (
+            <HeaderCell key={`header-${col.id}`} value={col.name} {...col} />
           ))}
         </Dynamic>
       </ScrollSyncPane>

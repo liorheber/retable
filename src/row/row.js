@@ -2,8 +2,6 @@ import React, { PureComponent, Fragment } from "react";
 import { ScrollSyncPane } from "react-scroll-sync";
 import styled from "styled-components";
 
-import { SelectionConsumer } from "../features/with_selection/with_selection";
-
 const RowStyle = styled.div`
   display: flex;
   position: relative;
@@ -12,7 +10,10 @@ const RowStyle = styled.div`
   max-height: ${props => props.rowHeight}px;
   min-height: ${props => props.rowHeight}px;
   transition: background-color 0.2s ease;
-  background-color: ${props => props.selected ? `${props.theme.selectedBackground} !important` : props.theme.background};
+  background-color: ${props =>
+    props.selected
+      ? `${props.theme.selectedBackground} !important`
+      : props.theme.background};
   box-shadow: 0px 3px 10px 0px ${props => props.theme.rowBorder};
   margin: 1px 0 0 0;
   align-items: center;
@@ -25,6 +26,7 @@ class Row extends PureComponent {
     super(props);
     this.onMouseEnter = this.onMouseEnter.bind(this);
     this.onMouseLeave = this.onMouseLeave.bind(this);
+    this.onSelectRow = this.onSelectRow.bind(this);
   }
 
   onMouseEnter() {
@@ -41,25 +43,25 @@ class Row extends PureComponent {
     rows[1].classList.remove("row-hover");
   }
 
+  onSelectRow() {
+    const { index, onSelectRow, selected } = this.props;
+    onSelectRow({index, selected});
+  }
+
   render() {
-    const { children, index, rowHeight, width } = this.props;
+    const { children, index, rowHeight, width, selected } = this.props;
     return (
-      <SelectionConsumer>
-        {({ onSelectRow, selection }) => (
-          <RowStyle
-            rowHeight={rowHeight}
-            key={index}
-            width={width}
-            className={`row-${index}`}
-            selected={selection.includes(index)}
-            onMouseEnter={this.onMouseEnter}
-            onMouseLeave={this.onMouseLeave}
-            onClick={() => onSelectRow(index)}
-          >
-            {children}
-          </RowStyle>
-        )}
-      </SelectionConsumer>
+      <RowStyle
+        rowHeight={rowHeight}
+        width={width}
+        className={`row-${index}`}
+        selected={selected}
+        onMouseEnter={this.onMouseEnter}
+        onMouseLeave={this.onMouseLeave}
+        onClick={this.onSelectRow}
+      >
+        {children}
+      </RowStyle>
     );
   }
 }

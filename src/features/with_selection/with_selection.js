@@ -10,10 +10,8 @@ const withSelection = WrappedComponent =>
         withSelection: props.selection,
         selection: [],
         handleSelection: this.handleSelection.bind(this),
-        onSelectRow: index => {
-          const { selection } = this.state;
-          const isSelected = selection.includes(index);
-          this.removeSelections(index, isSelected);
+        onSelectRow: ({index, selected}) => {
+          this.removeSelections(index, selected);
         },
         onSelectAll: () => {
           const { rows } = this.props;

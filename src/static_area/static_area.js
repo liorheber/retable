@@ -27,7 +27,7 @@ class StaticArea extends PureComponent {
       <TreeConsumer>
         {({ withTree }) => (
           <SelectionConsumer>
-            {({ handleSelection, selection, withSelection }) => {
+            {({ handleSelection, selection, withSelection, onSelectRow }) => {
               const widthOffset =
                 (withTree ? 40 : 10) + (withSelection ? 40 : 10);
               return (
@@ -35,9 +35,11 @@ class StaticArea extends PureComponent {
                   {rows.map((row, index) => (
                     <Row
                       rowHeight={rowHeight}
-                      key={index}
+                      key={`static-row-${index}`}
                       index={index}
                       width={width + widthOffset}
+                      onSelectRow={onSelectRow}
+                      selected={selection.includes(index)}
                     >
                       <RowActions
                         index={index}
@@ -49,7 +51,7 @@ class StaticArea extends PureComponent {
                       {columns.map((col, index) => (
                         <Cell
                           width={col.width}
-                          key={index}
+                          key={`row-${index}-col-${col.id}`}
                           className={`col-${col.id}`}
                           type={col.type}
                           value={row[col.id]}
