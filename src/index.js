@@ -11,10 +11,10 @@ import Loader from "./components/loader/loader";
 import withSort from "./features/with_sort/with_sort";
 import withFilter from "./features/with_filter/with_filter";
 import withColumns from "./features/with_columns/with_columns";
+import withRenderers from "./features/with_renderers/with_renderers";
+import TreeConsumer from "./features/with_tree/with_tree";
 
 import defaultTheme from "./themes/default";
-import withRenderers from "./features/with_renderers/with_renderers";
-
 
 class ReTable extends PureComponent {
   static defaultProps = {
@@ -76,5 +76,7 @@ class ReTable extends PureComponent {
 }
 
 export default withColumns(
-  withRenderers(withFilter(withSort(withSelection(withResize(ReTable)))))
+  TreeConsumer(
+    withRenderers(withFilter(withSort(withSelection(withResize(ReTable)))))
+  )
 );

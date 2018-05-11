@@ -3,6 +3,7 @@ import { ScrollSyncPane } from "react-scroll-sync";
 import styled from "styled-components";
 
 import { SelectionConsumer } from "../../features/with_selection/with_selection";
+import { TreeConsumer } from "../../features/with_tree/with_tree";
 
 const Static = styled.div`
   overflow: hidden;
@@ -25,16 +26,21 @@ class StaticFooter extends PureComponent {
   render() {
     const { width } = this.props;
     return (
-      <SelectionConsumer>
-        {({ onSelectAll, selection, isAllSelected, withSelection }) => {
-          const widthOffset = 40 + (withSelection ? 40 : 10);
-          return (
-            <Static width={width} widthOffset={widthOffset}>
-              Total
-            </Static>
-          );
-        }}
-      </SelectionConsumer>
+      <TreeConsumer>
+        {({ withTree }) => (
+          <SelectionConsumer>
+            {({ onSelectAll, selection, isAllSelected, withSelection }) => {
+              const widthOffset =
+                (withTree ? 40 : 10) + (withSelection ? 40 : 10);
+              return (
+                <Static width={width} widthOffset={widthOffset}>
+                  Total
+                </Static>
+              );
+            }}
+          </SelectionConsumer>
+        )}
+      </TreeConsumer>
     );
   }
 }

@@ -44,7 +44,7 @@ class Table extends PureComponent {
     super(props);
     this.state = {
       withSelection: true,
-      withTree: true,
+      withTree: false,
       rowHeight: 3,
       theme: "Default",
       columns: columns,
@@ -121,7 +121,7 @@ class Table extends PureComponent {
               <Switch
                 onChange={this.toggleWithTree}
                 checked={withTree}
-                label="withTree"
+                label="withTree (Dev)"
               />
               <Switch
                 onChange={this.toggleIsLoading}

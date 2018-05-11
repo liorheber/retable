@@ -11,10 +11,10 @@ const RowActionsStyle = styled.div`
 
 class RowActions extends PureComponent {
   render() {
-    const { index, onClick, selection, withSelection } = this.props;
+    const { index, onClick, selection, withSelection, withTree } = this.props;
     return (
       <RowActionsStyle>
-        <ExpandCollapse />
+        {withTree && <ExpandCollapse />}
         {withSelection && (
           <Checkbox
             onClick={event => onClick(index, selection.includes(index), event)}
