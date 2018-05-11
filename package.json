@@ -1,9 +1,9 @@
 {
-  "name": "re-table",
+  "name": "@liorheber/retable",
   "version": "0.0.0-development",
   "main": "index.js",
   "repository": "https://github.com/liorheber/retable.git",
-  "author": "liorheber <lior.heber@kenshoo.com>",
+  "author": "liorheber <lior.heber@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "webpack --config config/webpack/webpack.prod.js --mode production",
