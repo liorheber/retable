@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment } from "react";
+import React, { PureComponent } from "react";
 import FilterIcon from "@material-ui/icons/FilterList";
 import IconButton from "material-ui/IconButton";
 import { withStyles } from "material-ui/styles";

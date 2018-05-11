@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment } from "react";
+import React from "react";
 import Checkbox from "material-ui/Checkbox";
 import { withStyles } from "material-ui/styles";
 import CheckBoxOutlineBlankIcon from "@material-ui/icons/CheckBoxOutlineBlank";

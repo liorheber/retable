@@ -1,13 +1,8 @@
-import React, { PureComponent, Fragment } from "react";
-import styled from "styled-components";
+import React, { PureComponent } from "react";
+
+import BodyWrapper from "./body_wrapper";
 import StaticArea from "../static_area/static_area";
 import DynamicArea from "../dynamic_area/dynamic_area";
-
-const BodySyle = styled.div`
-  display: flex;
-  position: relative;
-  top: ${props => props.isLoading ? "-5px" : "0"}
-`;
 
 class Body extends PureComponent {
   render() {
@@ -22,7 +17,7 @@ class Body extends PureComponent {
     } = this.props;
 
     return (
-      <BodySyle isLoading={isLoading}>
+      <BodyWrapper isLoading={isLoading}>
         <StaticArea
           rows={rows}
           columns={staticColumns}
@@ -35,7 +30,7 @@ class Body extends PureComponent {
           rowHeight={rowHeight}
           width={dynamicWidth}
         />
-      </BodySyle>
+      </BodyWrapper>
     );
   }
 }

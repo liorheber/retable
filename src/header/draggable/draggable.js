@@ -19,7 +19,7 @@ class Resize extends PureComponent {
     this.draggable = React.createRef();
     this.handleStart = this.handleStart.bind(this);
     this.handleStop = this.handleStop.bind(this);
-    this.moveLine = debounce(this.moveLine.bind(this), 4);
+    this.moveLine = debounce(this.moveLine.bind(this), 1);
     this.state = {
       lastX: 0
     };

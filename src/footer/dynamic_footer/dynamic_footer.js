@@ -1,29 +1,16 @@
-import React, { PureComponent, Fragment } from "react";
+import React, { PureComponent } from "react";
 import { ScrollSyncPane } from "react-scroll-sync";
-import styled from "styled-components";
+
+import DynamicFooterWrapper from "./dynamic_footer_wrapper";
 
 import Cell from "../../cell/cell";
-
-const Dynamic = styled.div`
-  overflow: auto;
-  position: relative;
-  z-index: 2;
-  background: ${props => props.theme.background};
-  display: flex;
-  flex-direction: row;
-`;
-
-const Row = styled.div`
-  display: flex;
-  white-space: nowrap;
-`;
 
 class DynamicFooter extends PureComponent {
   render() {
     const { columns, totals } = this.props;
     return (
       <ScrollSyncPane>
-        <Dynamic>
+        <DynamicFooterWrapper>
           {columns.map(col => (
             <Cell
               width={col.width}
@@ -33,7 +20,7 @@ class DynamicFooter extends PureComponent {
               value={totals[col.id]}
             />
           ))}
-        </Dynamic>
+        </DynamicFooterWrapper>
       </ScrollSyncPane>
     );
   }

@@ -1,5 +1,4 @@
-import React, { PureComponent, Fragment } from "react";
-import styled, { injectGlobal } from "styled-components";
+import styled from "styled-components";
 
 const Grid = styled.div`
   display: flex;
