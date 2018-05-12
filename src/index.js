@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment } from "react";
+import React, { PureComponent } from "react";
 import { ScrollSync, ScrollSyncPane } from "react-scroll-sync";
 import { ThemeProvider } from "styled-components";
 import Header from "./header/header";
@@ -12,7 +12,7 @@ import withSort from "./features/with_sort/with_sort";
 import withFilter from "./features/with_filter/with_filter";
 import withColumns from "./features/with_columns/with_columns";
 import withRenderers from "./features/with_renderers/with_renderers";
-import TreeConsumer from "./features/with_tree/with_tree";
+import withTree from "./features/with_tree/with_tree";
 
 import defaultTheme from "./themes/default";
 
@@ -76,7 +76,7 @@ class ReTable extends PureComponent {
 }
 
 export default withColumns(
-  TreeConsumer(
+  withTree(
     withRenderers(withFilter(withSort(withSelection(withResize(ReTable)))))
   )
 );

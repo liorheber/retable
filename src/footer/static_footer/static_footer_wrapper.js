@@ -14,7 +14,7 @@ const StaticFooterWrapper = styled.div`
   justify-content: flex-end;
   padding: 0 24px;
   box-sizing: border-box;
-  border-right: 1px solid #e9ebf0;
+  border-right: 1px solid ${props => props.theme.gridBorder};
   text-transform: uppercase;
 `;
 
