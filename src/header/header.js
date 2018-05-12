@@ -3,13 +3,13 @@ import { ScrollSyncPane } from "react-scroll-sync";
 import styled from "styled-components";
 import StaticHeader from "./static_header/static_header";
 import DynamicHeader from "./dynamic_header/dynamic_header";
+import { HEADER } from "../resources/z_index";
 
 const HeaderStyle = styled.div`
   display: flex;
   position: sticky;
-  z-index: 2;
+  z-index: ${HEADER};
   top: 0;
-  z-index: 3;
   background: ${props => props.theme.background};
   overflow: hidden;
   white-space: nowrap;
@@ -19,20 +19,11 @@ const HeaderStyle = styled.div`
 
 class Header extends PureComponent {
   render() {
-    const {
-      staticColumns,
-      dynamicColumns,
-      width
-    } = this.props;
+    const { staticColumns, dynamicColumns, width } = this.props;
     return (
       <HeaderStyle>
-        <StaticHeader
-          columns={staticColumns}
-          width={width}
-        />
-        <DynamicHeader
-          columns={dynamicColumns}
-        />
+        <StaticHeader columns={staticColumns} width={width} />
+        <DynamicHeader columns={dynamicColumns} />
       </HeaderStyle>
     );
   }

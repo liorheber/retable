@@ -1,11 +1,13 @@
-import React, { PureComponent, Fragment } from "react";
+import React, { PureComponent } from "react";
 import { ScrollSyncPane } from "react-scroll-sync";
 import styled from "styled-components";
+
+import { BACK } from "../resources/z_index";
 
 const RowStyle = styled.div`
   display: flex;
   position: relative;
-  z-index: 1;
+  z-index: ${BACK};
   white-space: nowrap;
   max-height: ${props => props.rowHeight}px;
   min-height: ${props => props.rowHeight}px;
@@ -45,7 +47,7 @@ class Row extends PureComponent {
 
   onSelectRow() {
     const { index, onSelectRow, selected } = this.props;
-    onSelectRow({index, selected});
+    onSelectRow({ index, selected });
   }
 
   render() {

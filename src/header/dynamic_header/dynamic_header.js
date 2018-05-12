@@ -3,11 +3,12 @@ import { ScrollSyncPane } from "react-scroll-sync";
 import styled from "styled-components";
 
 import HeaderCell from "../header_cell/header_cell";
+import { DYNAMIC_AREA } from "../../resources/z_index";
 
 const Dynamic = styled.div`
   overflow: hidden;
   position: relative;
-  z-index: 2;
+  z-index: ${DYNAMIC_AREA};
   background: ${props => props.theme.background};
   display: flex;
   flex-direction: row;

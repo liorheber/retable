@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { FOOTER } from "../resources/z_index";
 
 const FooterWrapper = styled.div`
   display: flex;
   position: sticky;
-  z-index: 2;
+  z-index: ${FOOTER};
   bottom: 0;
-  z-index: 3;
   background: ${props => props.theme.background};
   overflow: hidden;
   white-space: nowrap;

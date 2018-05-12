@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment } from "react";
+import React, { PureComponent } from "react";
 import { ScrollSyncPane } from "react-scroll-sync";
 import styled from "styled-components";
 import Checkbox from "../../components/checkbox/checkbox";
@@ -9,10 +9,12 @@ import HeaderCell from "../header_cell/header_cell";
 import { SelectionConsumer } from "../../features/with_selection/with_selection";
 import { TreeConsumer } from "../../features/with_tree/with_tree";
 
+import { STATIC_AREA } from "../../resources/z_index";
+
 const Static = styled.div`
   overflow: hidden;
   position: relative;
-  z-index: 2;
+  z-index: ${STATIC_AREA};
   background: ${props => props.theme.background};
   min-width: ${props => props.width + props.widthOffset}px;
   max-width: ${props => props.width + props.widthOffset}px;

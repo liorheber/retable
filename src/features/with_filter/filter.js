@@ -6,6 +6,7 @@ import IconButton from "material-ui/IconButton";
 import Close from "@material-ui/icons/Close";
 import { withStyles } from "material-ui/styles";
 import styled, { keyframes } from "styled-components";
+import { MODAL } from "../../resources/z_index";
 
 const filterInAnimation = keyframes`
   0% {
@@ -48,9 +49,10 @@ const Content = styled.div`
 `;
 
 const FilterWrapper = styled.div`
-  animation: ${props => (props.isOpen ? filterInAnimation : filterOutAnimation)} 0.4s cubic-bezier(0.17, 0.84, 0.49, 1.29) forwards;
+  animation: ${props => (props.isOpen ? filterInAnimation : filterOutAnimation)}
+    0.4s cubic-bezier(0.17, 0.84, 0.49, 1.29) forwards;
   position: fixed;
-  z-index: 1000;
+  z-index: ${MODAL};
 `;
 
 const Header = styled.div`
@@ -73,7 +75,7 @@ const Actions = styled.div`
 
 const styles = theme => ({
   paper: {
-    fontSize: "14px",
+    fontSize: "14px"
   },
   close: {
     width: "30px",
@@ -104,7 +106,11 @@ class Filter extends PureComponent {
 
   handleClickOutside(event) {
     const { closeFilter, isOpen } = this.props;
-    if (isOpen && this.filter.current && !this.filter.current.contains(event.target)) {
+    if (
+      isOpen &&
+      this.filter.current &&
+      !this.filter.current.contains(event.target)
+    ) {
       closeFilter();
     }
   }
@@ -112,23 +118,23 @@ class Filter extends PureComponent {
   render() {
     const { classes, isOpen, closeFilter } = this.props;
     return (
-        <FilterWrapper isOpen={isOpen} innerRef={this.filter}>
-          <Paper className={classes.paper}>
-            <Header>
-              Filter By
-              <IconButton className={classes.close} onClick={closeFilter}>
-                <Close className={classes.closeIcon} />
-              </IconButton>
-            </Header>
-            <Content>
-              <TextField />
-            </Content>
-            <Actions>
-              <Button>Clear Filter</Button>
-              <Button>Apply</Button>
-            </Actions>
-          </Paper>
-        </FilterWrapper>
+      <FilterWrapper isOpen={isOpen} innerRef={this.filter}>
+        <Paper className={classes.paper}>
+          <Header>
+            Filter By
+            <IconButton className={classes.close} onClick={closeFilter}>
+              <Close className={classes.closeIcon} />
+            </IconButton>
+          </Header>
+          <Content>
+            <TextField />
+          </Content>
+          <Actions>
+            <Button>Clear Filter</Button>
+            <Button>Apply</Button>
+          </Actions>
+        </Paper>
+      </FilterWrapper>
     );
   }
 }

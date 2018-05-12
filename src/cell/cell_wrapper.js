@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BACK } from "../resources/z_index";
 
 const CellWrapper = styled.div`
   overflow: hidden;
@@ -12,7 +13,7 @@ const CellWrapper = styled.div`
   min-width: ${props => props.width}px;
   max-width: ${props => props.width}px;
   position: relative;
-  z-index: 1;
+  z-index: ${BACK};
   transition: min-width 0.4s ease, max-width 0.4s ease;
 `;
 

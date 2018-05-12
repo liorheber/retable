@@ -7,4 +7,5 @@ export default {
   footerFontColor: "#000000",
   rowBorder: "#e9ebf0",
   columnBorder: "#e9ebf0",
+  gridBorder: "#e9ebf0",
 }

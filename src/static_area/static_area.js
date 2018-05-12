@@ -7,12 +7,13 @@ import { TreeConsumer } from "../features/with_tree/with_tree";
 import Row from "../row/row";
 import Cell from "../cell/cell";
 import RowActions from "../row/row_actions";
+import { STATIC_AREA } from "../resources/z_index";
 
 const Static = styled.div`
   overflow-y: auto;
   overflow-x: hidden;
   position: relative;
-  z-index: 2;
+  z-index: ${STATIC_AREA};
   background: ${props => props.theme.background};
   min-width: ${props => props.width + props.widthOffset}px;
   max-width: ${props => props.width + props.widthOffset}px;

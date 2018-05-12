@@ -4,11 +4,13 @@ import styled from "styled-components";
 import { DraggableCore } from "react-draggable";
 import debounce from "debounce";
 
+import { MODAL } from "../../resources/z_index";
+
 const DraggableStyle = styled.div`
   width: 5px;
   cursor: col-resize;
   height: 100%;
-  z-index: 100;
+  z-index: ${MODAL};
   position: absolute;
   right: 0;
 `;

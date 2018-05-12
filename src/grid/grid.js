@@ -9,8 +9,8 @@ const Grid = styled.div`
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: auto;
-  border: 1px solid #e9ebf0;
-
+  border: 1px solid ${props => props.theme.gridBorder};
+  font-size: 1em;
   .row-hover {
     background-color: ${props => props.theme.hoverBackground};
   }
