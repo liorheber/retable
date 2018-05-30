@@ -22,7 +22,7 @@ Retable is a table component written in React.
  npm install @liorheber/retable --save
 ```
 
- **Installation using Yarn:**
+ **Installation using Yarn:** 
 
 ```
  yarn add @liorheber/retable
