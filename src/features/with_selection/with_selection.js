@@ -4,6 +4,9 @@ const Context = React.createContext();
 
 const withSelection = WrappedComponent =>
   class extends PureComponent {
+    static defaultProps = {
+      rows: []
+    };
     constructor(props, context) {
       super(props, context);
       this.state = {

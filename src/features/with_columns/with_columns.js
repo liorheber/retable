@@ -5,7 +5,8 @@ const Context = React.createContext();
 const withColumns = WrappedComponent =>
   class extends PureComponent {
     static defaultProps = {
-      onColumnChange: () => {}
+      onColumnChange: () => {},
+      columns: []
     };
 
     constructor(props, context) {
